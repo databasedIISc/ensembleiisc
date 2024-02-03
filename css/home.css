@@ -1,0 +1,12 @@
+.body-background {
+    position: absolute;
+    top: 94px;
+    z-index: -1;
+    
+    height: calc(100vh - 94px);
+    width: 100vw;
+
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("/img/home-background.webp");
+    background-size: cover;
+    background-position: center;
+}
