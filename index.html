@@ -10,12 +10,72 @@
 </head>
 <body>
     <header></header>
-    <script src="/scripts/header.js"></script>
-    
-    <div class="body-background"></div>
+   
 
-    <div class="main">
-        <!-- Add Content Here -->
+    <div id="main">
+            <div id="club_title_container"> 
+               <h1 id="club_title_Name"><b>Ensemble</b></h1>
+               <h2 id="club_tittle_descrption">The Undergraduate Physics Club of IISc </h2>
+            </div>
+            <div id="about_the_club_container">
+               <div id="about_the_club">
+               <h3 id="about_the_club_title">About the Club</h3>
+                <p> What is an Ensemble? – In Physics, an Ensemble represents a snapshot taken of several copies of the same system, all of which are in different possible states. At the Indian Institute of Science, Ensemble is the Physics Club of enthusiastic undergraduate students at IISc with different aims and interests but with the common goal of culturing new ideas in Physics and making them available to everyone. The club is a platform for all Physics enthusiasts at IISc to come, contribute, and carry this endeavor&nbsp;forward!</p>
+                <p id="about_the_club_End">To see what all we are involved in and our events, check out our "<a href="index.html">Activites</a>" page</p>
+               </div>
+            </div>
+            <div id="SS0"  class="slideShow1">
+                 <div class="slideshow-container">
+   
+     <div class="mySlides fade" style="display: block;">
+       <img class="slideShowImg" src="./img/img1.webp" style="width:100%">
+       <div class="text" style="color:black">Maxwell's demon</div>
+     </div>
+   
+     <div class="mySlides fade" style="display: none;">
+       <img class="slideShowImg" src="./img/img 2.webp" style="width:100%">
+       <div class="text">
+           Lecture series<br>
+           An ongoing lecture talk by Debadrito</div>
+     </div>
+   
+     <div class="mySlides fade" style="display: none;">
+       <img class="slideShowImg" src="./img/img3.webp" style="width:100%">
+       <div class="text">Caption Three</div>
+     </div>
+   
+    <div class="mySlides fade" style="display: none;">
+       <img class="slideShowImg" src="./img/img4.webp" style="width:100%">
+       <div class="text">Caption Three</div>
+     </div>
+     
+   </div>
+   <br>
+   
+   <div style="text-align:center">
+     <span class="dot active" onclick="currentSlide(1)"></span>
+     <span class="dot" onclick="currentSlide(2)"></span>
+     <span class="dot" onclick="currentSlide(3)"></span>
+     <span class="dot" onclick="currentSlide(4)"></span>
+   </div>
+   <div id="slideShowNavigators"> 
+     <a class="prev" onclick="plusSlides(-1)">❮</a>
+     <a class="next" onclick="plusSlides(1)">❯</a>
+     </div>
+   </div>
+             
+            
     </div>
+
+    <div id="EndContainer">
+                <h2>Join our mailing list for updates on events and for receiving our newsletter!</h2>
+                 <form>
+                   <label>Enter you email Here<input type="text"></label>
+                   
+                 </form>
+            </div>
+
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/slideshow1.js"></script>
 </body>
 </html>
