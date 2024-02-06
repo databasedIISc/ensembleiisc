@@ -52,3 +52,8 @@ body {
 .header-nav-item:hover, .header-nav-item:first-child {
     color: rgb(61, 77, 173);
 }
+
+.dot-container{
+    text-align: center;
+    display: flex;
+}
