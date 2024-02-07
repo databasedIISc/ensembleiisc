@@ -27,9 +27,6 @@ class Slideshow {
           DotsContainer.setAttribute("class","dot-container")
           slideShowNavigators.setAttribute("class","slideShowNavigators")
           
-
-
-
           HTMLSlide.innerHTML = `
               <img class="slideShowImg" src="${slide[0]}" style="width:100%">
               <div class="text">${slide[1]} <span>${index+1}/${this.imgCaptionArray.length}</span></div>
@@ -103,3 +100,4 @@ let homePageSlideShow1= new Slideshow(homePageSlideShow1ImgArray,1)
 let homePageSlideShow1HTML=document.getElementById("SS01")
 
 homePageSlideShow1.createHtmlSlideShow(homePageSlideShow1HTML)
+
