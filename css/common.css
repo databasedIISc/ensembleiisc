@@ -86,6 +86,7 @@ body {
 
 .popover-menu {
     height: 0;
+    z-index: 1;
     overflow: hidden;
     background-color: var(--bg);
     display: flex;

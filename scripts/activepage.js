@@ -1,3 +1,4 @@
 console.log(window.location.pathname);
-
-document.querySelector(`a.header-nav-item[href="${window.location.pathname}"`).classList.add("active");
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(`a.header-nav-item[href="${window.location.pathname}"`).classList.add("active");
+});

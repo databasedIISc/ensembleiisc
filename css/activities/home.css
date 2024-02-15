@@ -1,6 +1,5 @@
 body {
     overflow: hidden;
-    width: 100%;
 }
 
 .main {
@@ -11,10 +10,11 @@ body {
 
 }
 
-.header-container {
-    overflow-x: auto;
-}
 
+
+.header-container, header {
+    width: 100%;
+}
 
 .banner {
     min-height: 65svh;
@@ -104,7 +104,6 @@ main h1 {
 
 /* Parallax */
 .parallaxwrap {
-    /* margin-top: 94px; */
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
@@ -139,10 +138,19 @@ main h1 {
 
 }
 
+@media (width < 850px) {
+    body {
+        overflow: auto;
+    }
+    header {
+        position: fixed;
+    }
+    .parallaxwrap {
+        overflow-x: auto;
+    }
 
-
-
-
-
-
-
+    .main {
+        margin-top: 96px;
+    }
+    
+}
