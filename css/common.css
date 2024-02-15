@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap');
 
 /* Globals */
+:root {
+    --bg: rgb(242, 244, 250);
+}
+
 a {
     color: inherit;
     text-decoration: inherit;
@@ -12,7 +16,7 @@ body {
 
 /* Header */
 .header-container {
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
 
@@ -52,10 +56,42 @@ body {
     transition: color 0.2s;
 }
 
-.header-nav-item:hover, .header-nav-item:first-child {
+.header-nav-item:hover, .header-nav-item.active {
     color: rgb(61, 77, 173);
 }
 
 .main {
     margin-top: 94px;
+}
+
+/* Popover for activies */
+.header-nav-item.menu {
+    padding-inline: 0;
+    margin-block: 0;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+
+.header-nav-item.menu:hover {
+    color: inherit;
+    background-color: var(--bg);
+}
+
+.header-nav-item.menu:hover .popover-menu, .popover-menu:hover {
+    height: auto;
+}
+
+
+.popover-menu {
+    height: 0;
+    overflow: hidden;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    translate: -50%;
+    left: 50%;
 }
