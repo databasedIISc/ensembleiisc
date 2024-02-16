@@ -1,0 +1,23 @@
+body {
+    background-image: url("../../img/activities/schedule/bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media (width < 700px) {
+    body {
+        max-height: 100%;
+        overflow-y: hidden;
+    }
+}
+
+.title {
+    font-size: clamp(2rem, 4vw, 4rem);
+    text-align: center;
+}
+
+.text-shadow {
+    text-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+}

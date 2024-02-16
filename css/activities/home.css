@@ -1,0 +1,156 @@
+body {
+    overflow: hidden;
+}
+
+.main {
+    background-color: var(--bg);
+    padding-bottom: 50px;
+    z-index: 0;
+    position: relative;
+
+}
+
+
+
+.header-container, header {
+    width: 100%;
+}
+
+.banner {
+    min-height: 65svh;
+    width: 85%;
+    margin-inline: auto; 
+    margin-block: clamp(0.5rem, 7svh, 7rem);
+}
+
+img {
+    object-fit: cover;
+    
+}
+
+footer {
+    height: 100svh;
+    width: 100%;
+    z-index: 0;
+    background-color: var(--bg);
+
+}
+
+
+/* Styling the different sections */
+/* The introductory section */
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.act-section {
+    padding-block: 10px;
+
+}
+
+main {
+    background-image: url("/img/activities/activities_1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    position: relative;
+    display: grid;
+    place-content: center;
+    
+
+}
+
+main h1 {
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+}
+
+
+
+
+#banner-content{
+    min-height: 80%;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.784);
+    text-align: center;
+    padding: 5%;
+    display: grid;
+    margin-inline: max(10px, 8%);
+    margin-block: max(10px, auto);
+    place-content: center;
+    animation: fadein 1.5s linear;
+
+}
+
+#banner-content p {
+    padding-inline: 10%;
+    letter-spacing: 2px;
+    font-size: clamp(1rem, 1.4vw, 1.4rem);
+}
+
+#banner-content a {
+    text-decoration: underline;
+}
+
+
+
+/* Parallax */
+.parallaxwrap {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+.main, footer {
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: 0;
+}
+.parallax {
+    height: 80svh;
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: -1;
+    background: transparent;
+    /* background: black; */
+}
+
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50%;
+    width:   90%;
+    height: 110%;
+    transform: translateZ(-5px) scale(1.5);
+    z-index: -1;
+    
+
+}
+
+@media (width < 850px) {
+    body {
+        overflow: auto;
+    }
+    header {
+        position: fixed;
+    }
+    .parallaxwrap {
+        overflow-x: auto;
+    }
+
+    .main {
+        margin-top: 96px;
+    }
+    
+}
