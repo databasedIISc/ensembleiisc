@@ -7,10 +7,7 @@ body {
     padding-bottom: 50px;
     z-index: 0;
     position: relative;
-
 }
-
-
 
 .header-container, header {
     width: 100%;
@@ -24,8 +21,7 @@ body {
 }
 
 img {
-    object-fit: cover;
-    
+    object-fit: cover;    
 }
 
 footer {
@@ -33,9 +29,7 @@ footer {
     width: 100%;
     z-index: 0;
     background-color: var(--bg);
-
 }
-
 
 /* Styling the different sections */
 /* The introductory section */
@@ -60,21 +54,15 @@ footer {
 main {
     background-image: url("/img/activities/activities_1.webp");
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size: cover;    
     position: relative;
     display: grid;
     place-content: center;
-    
-
 }
 
 main h1 {
     font-size: clamp(2rem, 3.5vw, 3.5rem);
 }
-
-
-
 
 #banner-content{
     min-height: 80%;
@@ -87,7 +75,6 @@ main h1 {
     margin-block: max(10px, auto);
     place-content: center;
     animation: fadein 1.5s linear;
-
 }
 
 #banner-content p {
@@ -99,8 +86,6 @@ main h1 {
 #banner-content a {
     text-decoration: underline;
 }
-
-
 
 /* Parallax */
 .parallaxwrap {
@@ -115,15 +100,14 @@ main h1 {
     transform-style: preserve-3d;
     z-index: 0;
 }
+
 .parallax {
     height: 80svh;
     position: relative;
     transform-style: preserve-3d;
     z-index: -1;
     background: transparent;
-    /* background: black; */
 }
-
 
 .parallax img {
     position: absolute;
@@ -134,8 +118,6 @@ main h1 {
     height: 110%;
     transform: translateZ(-5px) scale(1.5);
     z-index: -1;
-    
-
 }
 
 @media (width < 850px) {

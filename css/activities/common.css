@@ -21,10 +21,6 @@ header {
     left: 0;
 }
 
-
-
-
-
 img {
     object-fit: cover;
     
@@ -40,14 +36,12 @@ img {
     text-decoration: underline;
 }
 
-
 h1, h2, h3 {
     font-family: var(--h-font);
     font-weight: 500;
 }
 
 /* The text sections */
-
 
 section h2 {
     font-size: clamp(1.4rem, 2.6vw, 2.6rem);
