@@ -17,12 +17,11 @@
 
 #heading-1{
     font-size: 3rem;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-align: center;
     margin: 2rem 0;
-
-
 }
+
 #hero-cont-1{
     width: 100%;
     margin: 0rem auto;
@@ -123,71 +122,9 @@
 
 }
 
-
-/* footer section */
-
-.get-updates{
-    width: 100%;
+/* footer backgroud */
+footer {
     background-color: rgb(232, 237, 244);
-    
-}
-
-.get-updates-text{
-    width: 37rem;
-    font-size: 2.1rem;
-    font-family: 'Roboto Condensed', sans-serif;
-    text-align: center;
-    margin: 0rem auto;
-    padding-top: 1rem;
-}
-
-.input-cont{
-    display: flex;
-    margin: 1.4rem auto;
-    padding-bottom: 1rem;
-    margin-bottom: 0;
-    position: relative;
-    width: 41rem;
-    justify-content: center;
-
-}
-
-.input-email{
-    height: 2.6rem;
-    width: 28rem;
-    background-color: transparent;
-    outline: none;
-    border: 1px solid black;
-    font-size: 1.1rem;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-
-}
-
-.submit-button{
-    width: 12rem;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.5s;
-    border: 1px solid black;
-    font-size: 1rem;
-
-}
-
-.submit-button:hover{
-    background-color: rgb(89, 89, 225);
-    color: white;
-}
-
-.email-text{
-    position: absolute;
-    background-color: rgb(232, 237, 244);
-    padding: 2px;
-    top: -12px;
-    left: 18px;
-    font-family: 'Open Sans', sans-serif;
-
-
 }
 
 /* media-queries */
@@ -202,40 +139,9 @@
     }
   }
 @media screen and (max-width: 700px) {
-    .get-updates-text{
-        font-size: 1.3rem;
-        width: 25rem;
-        
-    }
     .student-section{
         flex-direction: column;
         align-items: center;
-    }
-    
-  }
-@media screen and (max-width: 820px) {
-    
-    .input-cont{
-        width: 30rem;
-    
-    }
-    .get-updates-text{
-        font-size: 1.6rem;
-        width: 27rem;
-        
-    }
-    
-  }
-@media screen and (max-width: 510px) {
-    
-    .input-cont{
-        width: 22rem;
-    
-    }
-    .get-updates-text{
-        font-size: 1.2rem;
-        width:20rem;
-        
     }
     
   }

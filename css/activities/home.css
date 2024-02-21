@@ -29,7 +29,7 @@ img {
 }
 
 footer {
-    height: 100svh;
+    height: auto;
     width: 100%;
     z-index: 0;
     background-color: var(--bg);

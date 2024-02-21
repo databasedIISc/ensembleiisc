@@ -19,7 +19,7 @@ class Slideshow {
       // Looping through the image-caption array to create slides
       this.imgCaptionArray.forEach((slide, index) => {
           let HTMLSlide = document.createElement('div'); // Creating slide container
-          HTMLSlide.classList.add(`mySlides${this.id}}`); // Adding class for slide styling
+          HTMLSlide.classList.add(`mySlides${this.id}`); // Adding class for slide styling
           HTMLSlide.classList.add("fade"); // Adding class for fade effect
           // Setting display style based on index (first slide displayed, others hidden)
           HTMLSlide.setAttribute('style', `${index === 0 ? 'display:block' : 'display:none'}`);
@@ -76,7 +76,7 @@ class Slideshow {
   // Method to display slides and update navigation dots based on current slide index
   showSlides(n) {
       let i;
-      let slides = document.getElementsByClassName(`mySlides${this.id}}`); // Get all slides
+      let slides = document.getElementsByClassName(`mySlides${this.id}`); // Get all slides
       let dots = document.getElementsByClassName(`SS${this.id}Dots`); // Get all dots
       if (n > slides.length) { this.slideIndex = 1; } // If index exceeds total slides, reset to 1
       if (n < 1) { this.slideIndex = slides.length; } // If index is less than 1, set to last slide

@@ -13,18 +13,18 @@
 </head>
 <body>
     <header></header>
-    <script src="/scripts/header.js"></script>
     <script src="/scripts/activities_popover.js"></script> <!-- to create a popover for the sub-links in activies page -->
     <script src="/scripts/activepage.js"></script> <!-- to highlight active page -->
     
     <div class="body-background"></div>
 
-    <div id="main">
+    <div class="main">
            
             <div id="club_title_container"> 
                <h1 id="club_title_Name"><b>Ensemble</b></h1>
-               <h2 id="club_tittle_descrption">The Undergraduate Physics Club of IISc </h2>
+               <p id="club_title_description">The Undergraduate Physics Club <br/> of IISc </p>
             </div>
+
             <div id="about_the_club_container">
                <div id="about_the_club">
                <h3 id="about_the_club_title">About the Club</h3>
@@ -32,22 +32,21 @@
                 <p id="about_the_club_End">To see what all we are involved in and our events, check out our "<a href="index.html">Activites</a>" page</p>
                </div>
             </div>
+
             <div id="SS01"  class="slideShow1"> </div> 
             <div class="News-Container">
                  <p id="News-headline">News and Announcements</p>
               <div class="News-card-container">
-                    <div class="card"> 
-                      <img src="./img/NewsImg2.webp" alt="">
+                    <div class="card" style="background-image: url('/img/newsImg1.webp');">
                       <div class="News-details">
-                        <h1 class="news-headline">Paper Presentation on Quantum-based applications</h1>
+                        <h2 class="news-headline">Paper Presentation on Quantum-based applications</h2>
                             <p class="News-text">Paper presentation done by enthusiastic 1st and 2nd year student. Topics given by the convenors</p>
                             <button class="news-button">Papers and Pictures</button>
                       </div>
                     </div>
-                    <div class="card"> 
-                      <img src=".//img/newsImg1.webp" alt="">
+                    <div class="card" style="background-image: url('/img/NewsImg2.webp');">
                       <div class="News-details">
-                        <h1 class="news-headline">Lecture series</h1>
+                        <h2 class="news-headline">Lecture series</h2>
                             <p class="News-text">Introductory lecture series organised by senior students/convenors in various topics in Physics like Statistical Physics, CMP etc.</p>
                             <button class="news-button">Notes and upcoming Lectures</button>
                       </div>
@@ -56,11 +55,11 @@
             </div>
     </div>
 
-            <footer> <div class="footer-container"></div> </footer>
-
-
+    <footer>
+      <div class="footer-container"></div>
+    </footer>
+    
     <script src="/scripts/header.js"></script>
-    <script src="/scripts/footer.js"></script>
     <script src="/scripts/slideshow1.js"></script>
 </body>
 </html>
