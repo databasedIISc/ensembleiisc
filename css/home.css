@@ -63,6 +63,37 @@ body{
   padding: 20px 0;
 }
 
+#events-splide {
+  width: 1000px;
+  max-width: 95%;
+  height: auto;
+  margin-top: 60px;
+  background-color: #444;
+}
+
+#events-splide .splide__slide div {
+  background-color: #ccccccf0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  font-family: "Playfair Display", serif;
+  padding: 5px 0;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+#events-splide .splide__pagination {
+  display: none;
+}
+
+#events-splide img {
+  max-width: 100%;
+  width: auto;
+  height: 600px;
+  object-fit: cover;
+}
+
 #EndContainer {
   margin: 50px 0;
   display: flex;

@@ -94,13 +94,9 @@ body {
     left: 50%;
 }
 
-.header-nav-item:hover,
-.header-nav-item:first-child {
+.header-nav-item:hover {
     color: rgb(61, 77, 173);
 }
-
-
-
 
 .slideShow1{
     /* border: 3px solid black; */

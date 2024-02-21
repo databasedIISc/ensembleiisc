@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="/css/common.css"/>
     <link rel="stylesheet" href="/css/home.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
 <body>
     <header></header>
@@ -33,7 +36,29 @@
                </div>
             </div>
 
-            <div id="SS01"  class="slideShow1"> </div> 
+            <section id="events-splide" class="splide" aria-label="Events Slideshow">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="./img/img1.webp"/>
+                    <div><b>Maxwell's demon</b><br> Talk</div>
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./img/img2.webp"/>
+                    <div><b>Lecture series</b><br> An ongoing lecture talk by Debadrito</div>
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./img/img4.webp"/>
+                    <div><b>Paper presentation</b><br>After a successfull paper presentation</div>
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./img/img3.webp"/>
+                    <div>Just a cool poster</div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            
             <div class="News-Container">
                  <p id="News-headline">News and Announcements</p>
               <div class="News-card-container">
@@ -60,6 +85,6 @@
     </footer>
     
     <script src="/scripts/header.js"></script>
-    <script src="/scripts/slideshow1.js"></script>
+    <script src="/scripts/index.js"></script>
 </body>
 </html>
