@@ -3,7 +3,7 @@
 body{
     margin:0;
     padding:0;
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("/img/home-background.webp");
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../img/home-background.webp");
     background-size: cover;
     height: 100%;
     background-repeat: no-repeat;
