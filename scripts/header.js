@@ -24,13 +24,11 @@ const footerContent = `
 <p>© 2023 by Ensemble, IISc</p>
 `;
 
-footerContainers.forEach(element => {
- element.innerHTML=footerContent   
-});
+// footerContainers.forEach(element => {
+//  element.innerHTML=footerContent   
+// });
+
 headerComponents.forEach(element=>{
 
     element.innerHTML=headerContent;
 })
-
-
-
