@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body, html {
   height: 100%;
 }
@@ -43,8 +47,8 @@ body{
 }
 
 #about_the_club_container {
-  width: 90%;
-  padding: 50px max(calc((90% - 800px) / 2), 20px);
+  max-width: 90%;
+  padding: 50px;
   background: linear-gradient(0deg, #ffffffd0, #ffffffd0), url("../img/home-about-background.webp");
   background-position: center;
 
@@ -63,9 +67,19 @@ body{
   padding: 20px 0;
 }
 
+@media screen and (max-width: 800px) {
+  #club_title_description {
+    font-size: 24px;
+  }
+
+  #about_the_club_container {
+    font-size: 16px;
+  }
+}
+
 #events-splide {
   width: 1000px;
-  max-width: 95%;
+  max-width: 90%;
   height: auto;
   margin-top: 60px;
   background-color: #444;
@@ -92,6 +106,13 @@ body{
   width: auto;
   height: 600px;
   object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+  #events-splide img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 #EndContainer {
@@ -146,8 +167,9 @@ p#News-headline {
 }
 
 button.news-button {
-  width: 29vw;
+  width: auto;
   height: 5vh;
+  padding: 0 20px;
   background-color: transparent;
   border: 2px solid #222;
   transition: background-color 0.2s, color 0.2s;

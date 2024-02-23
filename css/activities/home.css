@@ -87,7 +87,6 @@ main h1 {
     margin-block: max(10px, auto);
     place-content: center;
     animation: fadein 1.5s linear;
-
 }
 
 #banner-content p {
@@ -134,23 +133,26 @@ main h1 {
     height: 110%;
     transform: translateZ(-5px) scale(1.5);
     z-index: -1;
-    
-
 }
 
 @media (width < 850px) {
     body {
         overflow: auto;
     }
+    
     header {
         position: fixed;
     }
-    .parallaxwrap {
-        overflow-x: auto;
+
+    .banner {
+        width: 90%;
     }
 
-    .main {
-        margin-top: 96px;
+    #banner-content p {
+        padding-inline: unset;
     }
-    
+
+    .parallaxwrap {
+        overflow-x: auto;
+    }    
 }
