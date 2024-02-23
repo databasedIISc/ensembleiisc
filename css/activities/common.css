@@ -13,25 +13,12 @@ body {
     background: var(--bg);
 }
 
-
-header {
-    position: sticky;
-    z-index: 1;
-    top: 0;
-    left: 0;
-}
-
-
-
-
-
 img {
-    object-fit: cover;
-    
+    object-fit: cover;    
 }
 
 .main {
-    margin-top: 0;
+    margin-top: 120px;
     font-family: var(--p-font);
     font-weight: 300;
 }

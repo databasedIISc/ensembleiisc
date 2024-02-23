@@ -58,7 +58,7 @@ footer {
 }
 
 main {
-    background-image: url("/img/activities/activities_1.webp");
+    background-image: url("../../img/activities/activities_1.webp");
     background-repeat: no-repeat;
     background-size: cover;
     
