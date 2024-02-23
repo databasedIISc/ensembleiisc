@@ -1,15 +1,16 @@
 const headerComponents = document.querySelectorAll("header");
 const footerContainers = document.querySelectorAll('.footer-container');
+const origin = window.location.origin;
 
 const headerContent= `
 <div class="header-container">
     <div class="header-logo">Ensemble, IISc</div>
     <div class="header-nav">
-        <a class="header-nav-item" href="./">Home</a>
-        <a class="header-nav-item" href="./gallery/">Gallery</a>
-        <a class="header-nav-item" href="./the-team/">The Team</a>
-        <a class="header-nav-item" href="./activities/">Activities</a>
-        <a class="header-nav-item" href="./contact/">Contact</a>
+        <a class="header-nav-item" href="${origin}/">Home</a>
+        <a class="header-nav-item" href="${origin}/gallery/">Gallery</a>
+        <a class="header-nav-item" href="${origin}/the-team/">The Team</a>
+        <a class="header-nav-item" href="${origin}/activities/">Activities</a>
+        <a class="header-nav-item" href="${origin}/contact/">Contact</a>
     </div>
 </div>
 `;
