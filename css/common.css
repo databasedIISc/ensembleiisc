@@ -30,6 +30,7 @@ body {
     height: 94px;
     background-color: #fff;
     border-bottom: 3px solid rgb(61, 77, 173);
+    z-index: 10000;
 }
 
 .header-logo {
