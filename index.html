@@ -1,90 +1,174 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+
+<html class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ensemble</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IISc Physics Club | Ensemble</title>
+    <link rel="stylesheet" href="./responsive.css"></link>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="icon" href=
+"./img/croped logo-removebg.png"
+          type="image/x-icon">
+ 
+  </head>
+  <body class="">
+    <header id="header" class="bg-black text-blue-400 text-sm h-14 absolute w-full flex flex-row items-center justify-between px-8 border-b border-white  overflow-visible"> 
+   <div class="text-2xl text-white font-semibold">ENSEMBLE</div>
 
-    <link rel="stylesheet" href="css/common.css"/>
-    <link rel="stylesheet" href="css/home.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
+        <nav id="nav" class=" flex  flex-row gap-12 p-5">
+            <a class="hover:text-white hover:scale-110 ease-in-out font-semibold" href="index.html">HOME</a>
+            <a class="hover:text-white hover:scale-110 ease-in-out font-semibold" href="gallery.html">GALLERY</a>
+            <a class="hover:text-white hover:scale-110 ease-in-out font-semibold" href="team.html">TEAM</a>
+           <div id="activities_nav" class="relative  "> 
+             <a  class="hover:text-white hover:scale-110 ease-in-out font-semibold" href="activities.html">ACTIVITIES</a>
+               <div id="activities_show" class="hidden absolute flex flex-col bg-black p-4 w-[200px] border border-white translate-x-[-50px]">
+                 
+               <a class="hover:text-white hover:scale-110 ease-in-out font-semibold p-2 ease-in-out" href="talk.html">Talk and Resources</a>
+               <a class="hover:text-white hover:scale-110 ease-in-out font-semibold p-2 ease-in-out" href="schedule.html">Schedule of upcoming events</a>
+               <a class="hover:text-white hover:scale-110 ease-in-out font-semibold p-2 ease-in-out" href="lecture.html">Lecture series 2024 </a>
+             
+            </div>
+         </div>
+            <a class="hover:text-white hover:scale-110 ease-in-out font-semibold" href="contact.html">CONTACT</a>
+        </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-</head>
-<body>
-    <header></header>
-    <script src="scripts/activepage.js"></script> <!-- to highlight active page -->
+        <div  id="nav-icon" class="w-[20px] hidden  flex-col gap-[0.25rem] relative ">
+ 
+           <span class="border-b border-white w-[20px] border-[2px] "></span>
+           <span class="border-b border-white w-[20px] border-[2px] "></span>
+           <span class="border-b border-white w-[20px] border-[2px] "></span>
+       
+         </div>
+    </header>
     
-    <div class="body-background"></div>
+     <div class="mobile_nav hidden h-screen w-screen bg-black pt-[50px] text-white flex flex-col justify-center items-center text-center transition ease-in-out">
+         <a class="hover:text-white hover:scale-110 ease-in-out font-semibold w-screen p-5 " href="index.html">HOME</a>
+         <a class="hover:text-white hover:scale-110 ease-in-out font-semibold w-screen p-5" href="gallery.html">GALLERY</a>
+         <a class="hover:text-white hover:scale-110 ease-in-out font-semibold w-screen p-5" href="team.html">TEAM</a>
+         <a class="hover:text-white hover:scale-110 ease-in-out font-semibold w-screen p-5" href="activities.html">ACTIVITIES</a>
+         <a class="hover:text-white hover:scale-110 ease-in-out font-semibold w-screen p-5" href="contact.html">CONTACT</a>
+ 
+     </div>
 
-    <div class="main">
-           
-            <div id="club_title_container"> 
-               <h1 id="club_title_Name"><b>Ensemble</b></h1>
-               <p id="club_title_description">The Undergraduate Physics Club <br/> of IISc </p>
+       <section id="main" style="background-image: url(./img/bg.jpg);" class="bg-cover bg-fixed py-8">
+         <section id="" style="background-image: url(./img/About.pg);" class="h-screen bg-no-repeat bg-center bg-cover  border-b border-white ">
+            <div class="h-screen flex flex-col justify-center items-center "> <!-- bg-black bg-opacity-60 --> 
+             <p class="text-[10vw] text-white tracking-widest ">ENSEMBLE</p>
+         <!--  <img src="./img/logo-removebg.png" alt="" class="w-[60px] h-20px]">  -->
+              <p class="text-white font-sans text-[3vw]">THE UNDERGRADUATE PHYSICS CLUB OF IISc</p>
             </div>
-
-            <div id="about_the_club_container">
-               <div id="about_the_club">
-               <h3 id="about_the_club_title">About the Club</h3>
-                <p> What is an Ensemble? – In Physics, an Ensemble represents a snapshot taken of several copies of the same system, all of which are in different possible states. At the Indian Institute of Science, Ensemble is the Physics Club of enthusiastic undergraduate students at IISc with different aims and interests but with the common goal of culturing new ideas in Physics and making them available to everyone. The club is a platform for all Physics enthusiasts at IISc to come, contribute, and carry this endeavor&nbsp;forward!</p>
-                <p id="about_the_club_End">To see what all we are involved in and our events, check out our "<a href="index.html">Activites</a>" page</p>
-               </div>
-            </div>
-
-            <section id="events-splide" class="splide" aria-label="Events Slideshow">
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li class="splide__slide">
-                    <img src="./img/img1.webp"/>
-                    <div><b>Maxwell's demon</b><br> Talk</div>
-                  </li>
-                  <li class="splide__slide">
-                    <img src="./img/img2.webp"/>
-                    <div><b>Lecture series</b><br> An ongoing lecture talk by Debadrito</div>
-                  </li>
-                  <li class="splide__slide">
-                    <img src="./img/img4.webp"/>
-                    <div><b>Paper presentation</b><br>After a successfull paper presentation</div>
-                  </li>
-                  <li class="splide__slide">
-                    <img src="./img/img3.webp"/>
-                    <div>Just a cool poster</div>
-                  </li>
-                </ul>
-              </div>
-            </section>
+         </section>
+    
+         <section id="About_us_container" class="bg-black h-full border-b border-white flex justify-around items-center ">
             
-            <div class="News-Container">
-                 <p id="News-headline">News and Announcements</p>
-              <div class="News-card-container">
-                    <div class="card" style="background-image: url('./img/newsImg1.webp');">
-                      <div class="News-details">
-                        <h2 class="news-headline">Paper Presentation on Quantum-based applications</h2>
-                            <p class="News-text">Paper presentation done by enthusiastic 1st and 2nd year student. Topics given by the convenors</p>
-                            <button class="news-button">Papers and Pictures</button>
-                      </div>
-                    </div>
-                    <div class="card" style="background-image: url('./img/NewsImg2.webp');">
-                      <div class="News-details">
-                        <h2 class="news-headline">Lecture series</h2>
-                            <p class="News-text">Introductory lecture series organised by senior students/convenors in various topics in Physics like Statistical Physics, CMP etc.</p>
-                            <button class="news-button">Notes and upcoming Lectures</button>
-                      </div>
-                    </div>
-              </div>
-            </div>
-    </div>
-
-    <footer>
-      <div class="footer-container"></div>
-    </footer>
     
-    <script src="scripts/header.js"></script>
-    <script src="scripts/activities_popover.js"></script> <!-- to create a popover for the sub-links in activies page -->
-    <script src="scripts/index.js"></script>
+              <div id="About_us_image_container" class="bg-black w-96">
+               
+                
+                 <div id="atom" class="relative w-[600px] h-[600px]">
+        
+                    <div id="nucleus" class="absolute text-8xl font-bold top-[38%] left-[42%] text-white">
+                        IISc
+                    </div>
+                   
+                    <div class="orbit w-[400px] h-[400px] border-green-400 absolute top-[13%] left-[8%] border-[10px] border-r-0 rounded-full">
+                      <div class="electron absolute rounded-full w-5 h-5 bg-white top-[47%] left-[47%]"></div>
+                    </div>
+                    <div class="orbit  w-[400px] h-[400px]  border-orange-400 absolute top-[13%] left-[8%] border-[10px] border-r-0  rounded-full">
+                      <div class="electron absolute rounded-full w-5 h-5 bg-white top-[47%] left-[47%]"></div>
+                    </div>
+                    <div class="orbit   w-[400px] h-[400px] border-blue-400  absolute top-[13%] left-[8%] border-[10px] border-r-0  rounded-full">
+                        <div class=" electron absolute rounded-full w-5 h-5 bg-white top-[47%] left-[47%]"></div>
+                      </div>
+                  </div>
+                  
+                  
+              </div>
+        
+              <div  id="about_us_content" class="about-content w-[500px] flex flex-col items-center justify-center">
+                <div class="text-4xl font-bold mb-4 text-white  font-sans text-center">About Us</div>
+                <p class="text-xl  text-gray-400  ">
+                    What is an Ensemble? In Physics, an Ensemble represents a snapshot taken of several copies of the same system, all of which are in different possible states. At the Indian Institute of Science, Ensemble is the Physics Club of enthusiastic undergraduate students at IISc with different aims and interests but with the common goal of culturing new ideas in Physics and making them available to everyone. The club is a platform for all Physics enthusiasts at IISc to come, contribute, and carry this endeavor forward!
+                </p>
+                <a class="button bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 px-6 mt-4" href="team.html">
+                    Meet our Team
+                </a>
+              </div>
+      </section>
+ 
+         <section id="News_and_Annoucements" class="">
+             <p class="text-4xl font-bold mb-4 text-white  py-8 font-sans text-center mt-8">News and Announcements</p>
+             <div id="News_and_Annoucements_container" class="grid grid-cols-1 md:grid-cols-3 gap-6 px-20 py-8"></div>
+         </section>
+      
+         <section id="Newsletter_container" class="h-[50vh] flex flex-col justify-center items-center text-white gap-10 n">
+            <p id="NewsLetter_Head" class="text-5xl mb-4 w-[75vw] ">Join our mailing list for updates on events and for receiving our newsletter!</p>
+            <form id="newsletter_form" class="flex items-center justify-between"  method="POST" action="https://script.google.com/macros/s/AKfycbwyp1XfGOxn_SnPrTdRwyn2JoWxqadV00YryjxlhmRLyYNLpkcEGzzhHUFmf019_KYl0w/exec">
+                <input type="email" placeholder="Enter your email" name="Email_for_newsletter" class="px-4 py-2 w-[60vw] h-[50px] border text-black border-white focus:outline-2 focus:outline-blue-600">
+                <button type="submit" class=" w-[15vw] text-white border border-white hover:bg-blue-800 h-[50px] text-[1.5vw]  focus:outline-none">JOIN US</button>
+            </from>
+        </section>
+       </section>
+ 
+       <footer class="h-[50vh] border-t border-white bg-black ">
+     <div class="flex flex-row justify-around items-center text-white h-full">
+         <img src="./img/iisc white.png" alt="" class=" footer_img h-72">
+         <div id="footer_links" class="text-center">
+             <p id="footer_Institute" class="p-3 border-b border-white text-2xl">INDIAN INSTITUTE OF SCIENCE - BANGALORE</p>
+             <p id="Conatact_mail" class="text-xl p-3 mb-10">ensemble@iisc.ac.in</p>
+             <div id="Social_media_links_container">
+                 <div class="grid grid-cols-2 gap-10">
+                     <a href="#" class="flex items-center justify-between w-[18vw]">
+ 
+                         <img src="./img/facebook_logo.png" class="w-12 h-12">
+                         <span class=" flex flex-row gap-2 items-center"> 
+                           <span class="bg-white h-2 w-2 rounded-full"></span>
+                           <p>ensemble.facebook</p> 
+                        </span> 
+ 
+                     </a>
+                     <a href="https://www.instagram.com/ensemble.iisc/?hl=en" class="flex items-center justify-between w-[18vw]">
+                         <img src="./img/instagram_logo.png" class="w-12 h-12">
+                        <span class=" flex flex-row gap-2 items-center"> 
+                            <span class="bg-white h-2 w-2 rounded-full"></span>
+                            <p>ensemble.instagram</p>
+                        </span> 
+                     </a>
+                     <a href="#" class="flex items-center justify-between w-[18vw]">
+                         <img src="./img/linkedIn_logo.png" class="w-12 h-12">
+                         <span class=" flex flex-row gap-2 items-center"> 
+                         <span class="bg-white h-2 w-2 rounded-full"></span>
+                         <p>ensemble.LinkedIn</p>
+                        </span> 
+ 
+                     </a>
+                     <a href="#" class="flex items-center justify-between w-[18vw]">
+                         <img src="./img/youtube_logo.png" class="w-12 h-12">
+                         <span class=" flex flex-row gap-2 items-center"> 
+                         <span class="bg-white h-2 w-2 rounded-full"></span>
+                         <p>ensemble.youtube</p>
+                        </span> 
+ 
+                     </a>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </footer>
+ 
+    <script src="main.js"></script>
+   
+ 
+ 
+ 
+ 
+ 
+ 
 </body>
-</html>
+</html> 
+
+
+
