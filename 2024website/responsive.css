@@ -1,0 +1,148 @@
+@media only screen and (max-width: 600px) {
+
+    nav {
+        position: relative;
+        top: -100%;
+        display: none;
+        width: 100vw;
+     
+    }
+  
+    #nav-icon {
+        display: flex;
+    }
+    #About_us_container{
+        padding: 40px  20px;
+    }
+    #About_us_image_container{
+        width: 0;
+    }
+  
+      #atom{
+        display: none;
+        width: 0;
+      }
+      #about_us_content{
+            transform: scale(0.8);
+      }
+
+      #footer_Institute,#Social_media_links_container{
+     transform: scale(0.75);
+      }
+
+      #Newsletter_container{
+           text-align: left;
+     transform: scale(0.75);
+        
+      } 
+    
+      #newsletter_form{
+        transform: scale(0.8);
+      }
+     
+      .footer_img{
+         display: none;
+      }
+      #Conatact_mail{
+        margin-bottom: 0;
+      }
+    .img{
+      display: none;
+    }
+   
+      #Contact_container{
+        width: 90vw;
+       justify-content: center;
+      }
+
+      #contact_form_container{
+        width: 90vw;
+        transform: scale(0.9);
+      }
+
+      #contact_footer_desktop{
+       display: none;
+      }
+      #contact_footer_mobile{
+        display: grid;
+        transform: scale(0.75);
+      }
+
+
+    #slide_show_desktop{
+      display: none;
+    }
+    #slide_show_mobile{
+      display: flex;
+    /*       transform: scale(0.75);
+      width: 90vw; */
+    }
+    #past_co_card_container_desktop,#current_co_card_container_desktop{
+        display: none;
+    }
+
+    #past_co_card_container_mobile,#current_co_card_container_mobile{
+      display: block;
+    
+     }
+    .card{
+      transform: scale(0.9);
+    }
+    #NewsLetter_Head{
+      width: 90vw;
+    }
+    #newsletter_form >input[type="email"]{
+      height: 60px;
+      width: 90vw;
+
+    }
+
+    #newsletter_form >button{
+       font-size: 1rem;
+       height: 60px;
+       width: 20vw;
+    }
+
+    .news_card{
+      transform: scale(0.90);
+      width: 90vw;
+    }
+    #News_and_Annoucements_container{
+      
+      justify-items: center;
+    }
+
+      #header{
+        overflow: hidden;
+      }
+
+      #nav{
+        display: none;
+      }
+      #header{
+        justify-content: space-between;
+      }
+      #contact_img{
+        display: none;
+      }
+      #team_img_desktop{
+        display: none;
+      }
+    }
+
+.team_card{
+  transform: scale(0.9);
+}
+  
+
+header{
+  overflow: hidden;
+}
+
+.news_content{
+   height: 230px;       
+}
+
+.News_content_button{
+  width: 100px;
+}
