@@ -1,0 +1,33 @@
+---
+layout: page
+title: Team
+permalink: /team/
+---
+{% for object in site.data.team reversed %}
+{% assign obj = object[1] %}
+<h2>{{ obj.year }}</h2>
+<h3>The Convenors</h3>
+<ul class="convenor-list">
+    {% for person in obj.convenors %}
+    <li>
+        <img src="{{ person.picture }}" alt="{{ person.name }}" class="">
+        <h4>{{ person.name }}</h4>
+        {% if person.bio %}<p>{{ person.bio }}</p>{%- endif -%}
+        <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{%- if obj.volunteers -%}
+<h3>Volunteers</h3>
+<ul class="member-list">
+    {% for person in year.volunteers %}
+    <li>
+        <img src="{{ person.image }}" alt="{{ person.name }}" class="">
+        <h4>{{ person.name }}</h4>
+        <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{%- endif -%}
+
+{% endfor %}

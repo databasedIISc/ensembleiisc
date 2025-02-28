@@ -1,0 +1,21 @@
+---
+layout: page
+---
+
+{{ content }}
+
+<ul class="post-list">
+    {% if page.category %}
+        {% for post in site.categories[page.category] %}
+            {% include post_list.html %}
+        {% else %}
+        <p>No {{page.category}} yet</p>
+        {% endfor %}
+    {% else %}
+        {% for post in site.posts %}
+            {% include post_list.html %}
+        {% else %}
+            <p>No {{page.category}} yet</p>
+        {% endfor %}
+    {% endif %}
+</ul>

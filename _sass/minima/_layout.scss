@@ -22,6 +22,11 @@
   &:visited {
     color: $grey-color-dark;
   }
+
+  img {
+    text-decoration: none;
+    height: $base-line-height * $base-font-size * 2.25;
+  }
 }
 
 .site-nav {
@@ -184,6 +189,30 @@
   @include relative-font-size(2);
 }
 
+
+.posts {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $spacing-unit;
+
+  
+
+  > li.post-card {
+    // margin-bottom: $spacing-unit*0.5;
+
+      img.post-card-image {
+        border-radius: 5px;
+        margin-bottom: $spacing-unit*0.5;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+      }
+
+  }
+}
+
 .post-list-heading {
   @include relative-font-size(1.75);
 }
@@ -193,7 +222,16 @@
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit*0.5;
+    > * {
+      display: grid;
+      grid-template-columns: 13ch auto;
+      align-items: center;
+    }
+
+    .post-list-date {
+      color: $grey-color;
+    }
   }
 }
 
@@ -207,6 +245,11 @@
   @include relative-font-size(1.5);
 }
 
+.post-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-unit;
+}
 
 
 /**
@@ -252,4 +295,9 @@
       @include relative-font-size(1.125);
     }
   }
+}
+
+
+section {
+  margin-bottom: $spacing-unit;
 }

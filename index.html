@@ -4,17 +4,65 @@
 
 layout: home
 ---
+<section id="activities">
 
-<h1>Latest Happenings</h1>
+<h1>Latest in Ensemble</h1>
 
-<ul>
-    {% for post in site.posts limit:3 %}
-    <li>
-        <img src="{{ post.image }}" alt="{{ post.title }}">
+<ul class="posts">
+    {% for post in site.posts limit:6 %}
+    <li class="post-card">
+        <img src="{{ post.image | default: '/assets/img/posts/noposter.webp' }}" alt="{{ post.title }}" class="post-card-image">
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p class="post-meta">
+            <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                {{ post.date | date: date_format }}
+              </time>
+              {%- if post.author -%}
+                • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ post.author }}</span></span>
+              {%- endif -%}
+        </p>
         <p>{{ post.excerpt }}</p>
     </li>
     {% else %}
     <li>No posts yet</li>
     {% endfor %}
 </ul>
+{% if site.posts.size > 0 %}
+      {% for category in site.categories %}
+        <a class="link-list" href="\{{ category[0] }}\">All {{ category[0] }}</a>
+      {% endfor %}
+{% endif %}
+
+</section>
+
+<section id="team">
+  <h1>Meet the Team</h1>
+  {% for object in site.data.team reversed %}
+  {% assign obj = object[1] %}
+  <h3>The convenors</h3>
+  <ul class="convenor-list">
+      {% for person in obj.convenors %}
+      <li>
+          <img src="{{ person.picture }}" alt="{{ person.name }}" class="">
+          <h4>{{ person.name }}</h4>
+          {% if person.bio %}<p>{{ person.bio }}</p>{%- endif -%}
+          <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+      </li>
+      {% endfor %}
+  </ul>
+  {%- if obj.volunteers -%}
+  <h3>Volunteers</h3>
+  <ul class="member-list">
+      {% for person in obj.volunteers %}
+      <li>
+          <img src="{{ person.image }}" alt="{{ person.name }}" class="">
+          <h4>{{ person.name }}</h4>
+          <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+      </li>
+      {% endfor %}
+  </ul>
+  {%- endif -%}
+  {% break %}
+  {% endfor %}
+</section>

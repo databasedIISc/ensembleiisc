@@ -1,0 +1,22 @@
+
+.convenor-list {
+    list-style: none;
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-block: $spacing-unit;
+    gap: $spacing-unit;
+
+    img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    h4 {
+        margin-top: 1em;
+        margin-bottom: .5em;
+    }
+
+}
