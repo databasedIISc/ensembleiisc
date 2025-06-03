@@ -5,15 +5,22 @@ permalink: /team/
 ---
 {% for object in site.data.team reversed %}
 {% assign obj = object[1] %}
-<h2>{{ obj.year }}</h2>
-<h3>The Convenors</h3>
+<h2 class="year-of-service">{{ obj.year }}</h2>
+<div class="team-title">    
+    <h3>Convenors</h3>
+    <hr>
+</div>
 <ul class="convenor-list">
     {% for person in obj.convenors %}
     <li>
         <img src="{{ person.picture }}" alt="{{ person.name }}" class="">
-        <h4>{{ person.name }}</h4>
-        {% if person.bio %}<p>{{ person.bio }}</p>{%- endif -%}
-        <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+        <div class="person-info">
+            <div>
+                <h4>{{ person.name }}</h4>
+                {% if person.bio %}<p>{{ person.bio }}</p>{%- endif -%}
+            </div>
+            <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+        </div>
     </li>
     {% endfor %}
 </ul>

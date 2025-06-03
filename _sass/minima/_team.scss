@@ -1,22 +1,71 @@
+.year-of-service {
+    margin-top: 5*$spacing-unit;
+}
 
 .convenor-list {
     list-style: none;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     margin: 0;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin-block: $spacing-unit;
-    gap: $spacing-unit;
+    gap: 2*$spacing-unit;
 
     img {
-        width: 100%;
-        aspect-ratio: 1/1;
+        width: min(33vw, 50%);
+        aspect-ratio: 16/9;
         border-radius: 5px;
         object-fit: cover;
     }
 
-    h4 {
-        margin-top: 1em;
-        margin-bottom: .5em;
+    li {
+        display: flex;
+        gap: 2*$spacing-unit;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .person-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: $spacing-unit;
+            width: -webkit-calc(100% - 150px);
+
+            h4 {
+                margin: 0;
+            }
+
+            p {
+                margin: 0;
+                font-size: 0.9em;
+                color: #555;
+            }
+        }
+    }
+}
+
+.team-title {
+    display: flex;
+    align-items: baseline;
+    gap: $spacing-unit;
+
+    h3 {
+        display: inline;
+        width: 20%;
+        margin: 0;
+
+        @include media-query($on-laptop) {
+            width: min-content;
+            gap: 0;
+        }
     }
 
+    hr {
+        display: inline;
+        width: 100%;
+        height: 0;
+        border: 0;
+        border-bottom: 2px solid #000;
+    }
 }
