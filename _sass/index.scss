@@ -1,0 +1,129 @@
+#intro-banner {
+    display: block;
+    width: 100%;
+    justify-items: center;
+
+    * {
+    height: 80svh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    }
+}
+
+.intro-text {
+    --height: 4em;
+    position: relative; // Added for positioning pseudo-elements
+    justify-items: center;
+    background-color: var(--foreground);
+    color: var(--bg);
+    padding-block: calc(1.62 * var(--height)); // Adjusted to use the variable for height
+
+    // Styles for the inner container holding the text
+    & > .container { // Assuming the direct child is .container based on HTML
+        width: 50%; // Existing rule for the text block width
+        position: relative; // Added to ensure text is above pseudo-elements
+        z-index: 1;       // Added to ensure text is above pseudo-elements
+
+        .intro-title {
+            margin-top: 0;
+        }
+    }
+
+    // Pseudo-elements for the outward curves
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: calc(var(--height) + 10px); // Height of the curve, adjust as needed
+        background-color: var(--bg); // Match the intro-text background
+    }
+
+    &::before { // Top outward curve
+        top: 0;
+        transform: translateY(calc(-100% + var(--height))); // Position above the main element
+        border-radius: 0 0 100% 100%;   // Create an upward curve on the bottom edge of this pseudo-element
+    }
+
+    &::after { // Bottom outward curve
+        bottom: 0;
+        transform: translateY(calc(100% - var(--height))); // Position below the main element
+        border-radius: 100% 100% 0 0;   // Create a downward curve on the top edge of this pseudo-element
+    }
+}
+
+.section {
+    display: flex;
+    padding-block: 2em;
+    width: 100svw;
+}
+
+.section-title {
+    margin: 0;
+    writing-mode: sideways-lr;
+    min-height: 60svh;
+    position: relative;
+    // text-align: center;
+    border-right: 2px solid var(--foreground);
+    // &::after {
+    //     content: '';
+    //     width: 2px;
+    //     height: 100%;
+    //     background-color: var(--foreground);
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    // }
+}
+
+.latests {
+    margin-left: 5vw;
+    width: 100%;
+
+    .options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.latest-items {
+    height: 60svh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex-grow: 1;
+    
+
+
+    .latest {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: row;
+
+        .latest-info {
+            width: 62%;
+            margin-top: 0;
+
+        }
+
+        .latest-banner {
+            margin-top: 0;
+            width: 38%;
+            img {
+                margin-top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+        width: inherit;
+        flex-grow: 1;
+        datetime {
+            font-size: var(--size-1);
+        }
+    }
+}

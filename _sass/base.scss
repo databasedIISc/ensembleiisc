@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap');
+
+
+:root {
+  --size--2: clamp(0.5002rem, 0.7566rem + -0.3109vw, 0.6944rem);
+  --size--1: clamp(0.7072rem, 0.8737rem + -0.2018vw, 0.8333rem);
+  --size-0: clamp(1rem, 1rem + 0vw, 1rem);
+  --size-1: clamp(1.2rem, 1.1315rem + 0.3424vw, 1.414rem);
+  --size-2: clamp(1.44rem, 1.261rem + 0.895vw, 1.9994rem);
+  --size-3: clamp(1.728rem, 1.3763rem + 1.7586vw, 2.8271rem);
+  --size-4: clamp(2.0736rem, 1.4579rem + 3.0784vw, 3.9976rem);
+  --size-5: clamp(2.4883rem, 1.4758rem + 5.0628vw, 5.6526rem);
+
+  // Heading font
+  --serif-font: 'Instrument Serif', serif;
+  // Body font
+  --sans-font: 'Instrument Sans', sans-serif;
+
+  // Colours
+  --yellow: rgb(255, 174, 0);
+  --bg: rgb(255, 255, 255);
+  --foreground: rgb(0, 0, 0);
+
+}
+
+
+nav.navbar {
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    background: white;
+    // border-bottom: .5px solid black;
+    color: black;
+    .navbar-toggler, .navbar-brand {
+      color: black;
+    }
+
+    .title-img {
+      height: 2.5em;
+    }
+
+    .offcanvas {
+        height: 100svh;
+
+        .navbar-nav {
+            text-align: center;
+        }
+
+        .nav-item, .nav-link {
+          font-size: var(--size-3);
+          font-family: var(--sans-font);
+          font-weight: 600;
+        }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--sans-font);
+  font-weight: 700 !important;
+}
+
+main{
+
+  h1 {
+    font-size: var(--size-5);
+  }
+  h2 {
+    font-size: var(--size-4);
+  }
+  h3 {
+    font-size: var(--size-3);
+  }
+  h4 {
+    font-size: var(--size-2);
+  }
+  h5 {
+    font-size: var(--size-1);
+  }
+  p, li, span, a {
+    font-size: var(--size-0);
+  }
+
+  * {
+    margin-top: 1em;
+  }
+
+}
+
+
+
+// Utitlity
+
+.bg-yellow {
+  background-color: var(--yellow) !important;
+  color: black !important;
+}
+
+.material-symbols-outlined {
+  font-size: inherit;
+  margin-top: 0;
+  transform: translateY(11.5%);
+
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+
+  &.large {
+    font-size: 1.6em;
+  }
+}
+
+// Swiper
+.swiper {
+  .swiper-items > * {
+    transition-behavior: allow-discrete;
+    transition-duration: 0.3s;
+    
+    &:not(:first-child) {
+      opacity: 0;
+      display: none;
+    }
+    &:first-child {
+      opacity: 1;
+    }
+
+  }
+}
+
+
+@import "index";

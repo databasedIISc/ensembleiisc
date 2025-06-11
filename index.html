@@ -2,16 +2,77 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
+layout: default
+title: Home
+permalink: /
+order: 1
 ---
+
+<section id="intro">
+  <div class="container">
+    <picture id="intro-banner">
+      <source class="img img-fluid" srcset="/assets/img/home/banner_small.webp" type="image/webp" media="(width <= 768px)">
+      <img class="img img-fluid" src="/assets/img/home/banner.webp">
+    </picture>
+  </div>
+  <div class="intro-text">
+    <div class="container">
+      <h3 class="intro-title">/// Who we are</h3>
+      <div class="">
+        <p>
+          Ensemble is the undergraduate physics club of the Indian Institute of Science, Bengaluru.
+        </p>
+        <a href="/about" class="btn btn-light">Learn more</a>
+    </div>
+    </div>
+  </div>
+</section>
+
 <section id="activities">
+<div class="section container">
 
-<h1>Latest in Ensemble</h1>
+<h2 class="section-title">Latest</h2>
+<div class="latests swiper">
+  <ul class="latest-items swiper-items" id="latest-posts">
+    {% for post in site.posts limit:6 %}
+    <li class="latest">
+      <div class="latest-info">
+        <datetime datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ post.date | date: "%d %b %Y" | upcase }}
+        </datetime>
+        <h3>
+          {{ post.title | escape }}
+        </h3>
+        <p>
+          {{ post.excerpt | strip_html | truncate: 150, '...' }}
+        </p>
+        <div class="">
+          <a href="{{ post.url }}" class="btn btn-dark"><span class="material-symbols-outlined norm">arrow_forward</span> Read more</a>
+        </div>
+      </div>
+      <div class="latest-banner">
+        <img src="{{ post.image | default: '/assets/img/posts/noposter.webp' }}" alt="{{ post.title }}" class="post-img">
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="options">
+    <div class="controls swiper-controls">
+      <button class="prev btn btn-dark"><span class="material-symbols-outlined large">arrow_back</span></button>
+      <button class="next btn btn-dark"><span class="material-symbols-outlined large">arrow_forward</span></button>
+    </div>
+    <div class="extra-links">
+      <a href="{{ site.baseurl }}/events" class="btn btn-dark"><span class="material-symbols-outlined">arrow_forward</span> All Events</a>
+      <a href="{{ site.baseurl }}/lectures" class="btn btn-dark"><span class="material-symbols-outlined">arrow_forward</span> All Lectures</a>
+    </div>
+  </div>
+  </div>
+</div>
 
-<ul class="posts">
+<!-- <ul class="posts">
     {% for post in site.posts limit:6 %}
     <li class="post-card">
-        <img src="{{ post.image | default: '/assets/img/posts/noposter.webp' }}" alt="{{ post.title }}" class="post-card-image">
+        <img src="{{ post.image | default: '/assets/img/posts/noposter.webp' }}" alt="{{ post.title }}" class="post-card-image img img-fluid">
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
         <p class="post-meta">
             <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -32,37 +93,8 @@ layout: home
       {% for category in site.categories %}
         <a class="link-list" href="\{{ category[0] }}\">All {{ category[0] }}</a>
       {% endfor %}
-{% endif %}
+{% endif %} -->
+</div>
 
 </section>
 
-<section id="team">
-  <h1>Meet the Team</h1>
-  {% for object in site.data.team reversed %}
-  {% assign obj = object[1] %}
-  <h3>The convenors</h3>
-  <ul class="convenor-list">
-      {% for person in obj.convenors %}
-      <li>
-          <img src="{{ person.picture }}" alt="{{ person.name }}" class="">
-          <h4>{{ person.name }}</h4>
-          {% if person.bio %}<p>{{ person.bio }}</p>{%- endif -%}
-          <a href="mailto:{{ person.email }}">{{ person.email }}</a>
-      </li>
-      {% endfor %}
-  </ul>
-  {%- if obj.volunteers -%}
-  <h3>Volunteers</h3>
-  <ul class="member-list">
-      {% for person in obj.volunteers %}
-      <li>
-          <img src="{{ person.image }}" alt="{{ person.name }}" class="">
-          <h4>{{ person.name }}</h4>
-          <a href="mailto:{{ person.email }}">{{ person.email }}</a>
-      </li>
-      {% endfor %}
-  </ul>
-  {%- endif -%}
-  {% break %}
-  {% endfor %}
-</section>
