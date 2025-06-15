@@ -1,4 +1,7 @@
 .year-of-service {
+    &:first-child {
+        margin-top: 22*$spacing-unit;
+    }
     margin-top: 5*$spacing-unit;
 }
 
@@ -14,7 +17,8 @@
         width: min(33vw, 50%);
         aspect-ratio: 16/9;
         border-radius: 5px;
-        object-fit: cover;
+        // object-fit: cover;
+        object-fit: fill;
     }
 
     li {
@@ -67,5 +71,49 @@
         height: 0;
         border: 0;
         border-bottom: 2px solid #000;
+    }
+}
+
+.volunteers {
+    margin: 3*$spacing-unit 0 $spacing-unit;
+}
+
+.member-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2*$spacing-unit;
+
+    li {
+        display: flex;
+        gap: $spacing-unit;
+
+        .person-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h4 {
+                margin: 0;
+            }
+            
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        img {
+            width: 50%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+
+    @include media-query($on-laptop) {
+        grid-template-columns: 1fr;
     }
 }

@@ -2,6 +2,7 @@
 layout: page
 title: Team
 permalink: /team/
+picture: /assets/img/random-background.jpg
 ---
 {% for object in site.data.team reversed %}
 {% assign obj = object[1] %}
@@ -25,13 +26,18 @@ permalink: /team/
     {% endfor %}
 </ul>
 {%- if obj.volunteers -%}
-<h3>Volunteers</h3>
+<div class="team-title volunteers">    
+    <h3>Volunteers</h3>
+    <hr>
+</div>
 <ul class="member-list">
-    {% for person in year.volunteers %}
+    {% for person in obj.volunteers %}
     <li>
         <img src="{{ person.image }}" alt="{{ person.name }}" class="">
-        <h4>{{ person.name }}</h4>
-        <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+        <div class="person-info">
+            <h4>{{ person.name }}</h4>
+            <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+        </div>
     </li>
     {% endfor %}
 </ul>
