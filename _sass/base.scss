@@ -41,7 +41,7 @@ nav.navbar {
         height: 100svh;
 
         .navbar-nav {
-            text-align: center;
+            margin: 0;
         }
 
         .nav-item, .nav-link {
@@ -74,11 +74,15 @@ main{
   h5 {
     font-size: var(--size-1);
   }
-  p, li, span, a {
+  p {
     font-size: var(--size-0);
   }
 
-  * {
+  li, span, a {
+    font-size: inherit;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, li {
     margin-top: 1em;
   }
 
@@ -128,3 +132,4 @@ main{
 
 
 @import "index";
+@import "post";

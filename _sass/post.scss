@@ -1,0 +1,46 @@
+.item-list {
+    list-style-type: none;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1.5em;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1em;
+
+
+        .item-image {
+            background-color: rgb(237, 237, 237);
+            img {
+                margin: 0;
+                aspect-ratio: 1 / 1;
+                object-position: center;
+                object-fit: cover;
+                transition-duration: 0.3s;
+                transition-behavior: allow-discrete;
+
+                &:hover {
+                    object-fit: contain;
+                }
+
+
+            }
+
+        }
+
+        .item-meta {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2em;
+
+            datetime {
+                color: hsl(from var(--foreground) h s l / 0.5);
+            }
+        }
+    }
+
+}

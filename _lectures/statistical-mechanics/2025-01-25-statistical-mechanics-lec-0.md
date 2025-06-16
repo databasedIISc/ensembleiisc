@@ -3,6 +3,7 @@ title: Statistical Mechanics Lec 0
 author: Gunda Sai Vinay
 layout: post
 image: /assets/img/posts/stat_mech_lec_0/poster.webp
+# topic: "Statistical Mechanics"    
 ---
 
 Pre-requisites for Statistical Mechanics.

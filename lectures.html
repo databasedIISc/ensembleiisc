@@ -1,7 +1,28 @@
 ---
-layout: activity
+layout: page
 title: Lectures
-category: lectures
 permalink: /lectures/
 order: 3
 ---
+
+<ul class="item-list">
+
+
+{% assign all_topics = "" | split: "" %}
+
+  {% for lecture in site.lectures %}
+    {% if lecture.topic %}
+      {% unless all_topics contains lecture.topic %}
+        {% assign all_topics = all_topics | push: lecture.topic %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign sorted_topics = all_topics | sort %}
+  
+  {% for topic in sorted_topics %}
+    {% include post_list.html %}
+  {% endfor %}
+
+
+</ul>

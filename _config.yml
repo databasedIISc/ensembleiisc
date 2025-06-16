@@ -60,7 +60,34 @@ defaults:
 excerpt_separator: <!--more-->
 
 collections:
-  posts:
+  # posts:
+  #   output: true
+  #   permalink: /:categories/:year/:month/:day/:title/
+  lectures:
     output: true
-    permalink: /:categories/:year/:month/:day/:title/
+    permalink: /lectures/:path/
+  events:
+    output: true
+    # permalink: /events/:title/
 
+defaults:
+  - scope:
+      path: "_lectures/statistical-mechanics"
+      type: lectures
+    values:
+      topic: "Statistical Mechanics"
+  - scope:
+      path: "_lectures/relativity"
+      type: lectures
+    values:
+      topic: "Relativity"
+  - scope:
+      path: "_lectures/quantum-technologies"
+      type: lectures
+    values:
+      topic: "Quantum Technologies"
+  - scope:
+      path: "_lectures/others"
+      type: lectures
+    values:
+      topic: "Other Topics"

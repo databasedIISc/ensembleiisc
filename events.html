@@ -1,7 +1,15 @@
 ---
-layout: activity
+layout: page
 title: Events
-category: events
 permalink: /events/
 order: 4
 ---
+
+<ul class="item-list">
+    {% assign events = site.events | sort: 'date' | reverse %}
+    {% for post in events %}
+        {% include post_list.html %}
+    {% else %}
+        <p>No events yet</p>
+    {% endfor %}
+</ul>
