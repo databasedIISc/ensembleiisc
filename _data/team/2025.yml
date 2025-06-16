@@ -3,16 +3,33 @@ convenors:
   - name: "Ritabrata Ghosh"
     bio:
     email: 
-    picture: "/assets/img/team/2025/ritabrata.webp"
+    # picture: "/assets/img/team/2025/ritabrata.webp"
+    picture: "/assets/img/posts/noposter.webp"
 
   - name: "Simar Narula"
     bio:
     email: 
-    picture: "/assets/img/team/2025/simar.webp"
+    # picture: "/assets/img/team/2025/simar.webp"
+    picture: "/assets/img/posts/noposter.webp"
 
   - name: "Gunda Sai Vinay"
     bio:
     email: 
-    picture: "/assets/img/team/2025/vinay.webp"
+    # picture: "/assets/img/team/2025/vinay.webp"
+    picture: "/assets/img/posts/noposter.webp"
+volunteers:
+  - name: "Volunteer 1"
+    email: volunteer1@example.com
+    image: "/assets/img/team/2024/abhishek.webp"
 
-  
+  - name: "Volunteer 2"
+    email: volunteer2@example.com
+    image: "/assets/img/team/2024/abhishek.webp"
+
+  - name: "Volunteer 3"
+    email: volunteer3@example.com
+    image: "/assets/img/team/2024/abhishek.webp"
+
+  - name: "Volunteer 4"
+    email: volunteer4@example.com
+    image: "/assets/img/team/2024/abhishek.webp"
