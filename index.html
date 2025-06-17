@@ -34,7 +34,10 @@ order: 1
 <h2 class="section-title">Latest</h2>
 <div class="latests swiper">
   <ul class="latest-items swiper-items" id="latest-posts">
-    {% for post in site.posts limit:6 %}
+    {% assign unsorted_posts = site.lectures | concat: site.events %}
+    {% assign filtered_posts = unsorted_posts | where_exp: "post", "post.layout != 'topic-page'" %}
+    {% assign posts = filtered_posts | sort: 'date' | reverse %}
+    {% for post in posts limit:6 %}
     <li class="latest">
       <div class="latest-info">
         <datetime datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
