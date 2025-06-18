@@ -27,13 +27,17 @@ layout: default
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
   </div>
   <div class="col-12 col-md-4">
+    {% if page.image %}
     <img src="{{ page.image | default: '/assets/img/posts/noposter.webp' }}" alt="{{ page.title }}" class="img img-fluid" itemprop="image">
+    {% endif %}
           <p class="post-media">
         {%- if page.video -%}
-          <a href="{{ page.video }}" target="_blank">Watch on YouTube</a>
+          <a href="{{ page.video }}" target="_blank"><span class="material-symbols-outlined">play_arrow</span> Watch on YouTube</a>
         {%- endif -%}
+        </p>
+      <p class="post-media">
       {%- if page.slides -%}
-        <a href="{{ page.slides }}" target="_blank">Lecture Materials</a>
+        <a href="{{ page.slides }}" target="_blank"><span class="material-symbols-outlined">import_contacts</span> Lecture Materials</a>
       {%- endif -%}
       </p>
   </div>

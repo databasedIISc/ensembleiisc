@@ -2,15 +2,15 @@
 
 
 :root {
-  --size--2: clamp(0.5002rem, 0.7566rem + -0.3109vw, 0.6944rem);
-  --size--1: clamp(0.7072rem, 0.8737rem + -0.2018vw, 0.8333rem);
+  --size--2: clamp(0.5628rem, 0.7402rem + -0.229vw, 0.6944rem);
+  --size--1: clamp(0.7502rem, 0.8623rem + -0.1446vw, 0.8333rem);
   --size-0: clamp(1rem, 1rem + 0vw, 1rem);
-  --size-1: clamp(1.2rem, 1.1315rem + 0.3424vw, 1.414rem);
-  --size-2: clamp(1.44rem, 1.261rem + 0.895vw, 1.9994rem);
-  --size-3: clamp(1.728rem, 1.3763rem + 1.7586vw, 2.8271rem);
-  --size-4: clamp(2.0736rem, 1.4579rem + 3.0784vw, 3.9976rem);
-  --size-5: clamp(2.4883rem, 1.4758rem + 5.0628vw, 5.6526rem);
-
+  --size-1: clamp(1.2rem, 1.1537rem + 0.2313vw, 1.333rem);
+  --size-2: clamp(1.44rem, 1.3228rem + 0.5859vw, 1.7769rem);
+  --size-3: clamp(1.728rem, 1.5052rem + 1.1141vw, 2.3686rem);
+  --size-4: clamp(2.0736rem, 1.6966rem + 1.8848vw, 3.1573rem);
+  --size-5: clamp(2.4883rem, 1.8899rem + 2.992vw, 4.2087rem);
+  
   // Heading font
   --serif-font: 'Instrument Serif', serif;
   // Body font

@@ -186,7 +186,7 @@
 }
 
 .page-heading {
-  @include relative-font-size(2);
+  @include relative-font-size(1);
 }
 
 
@@ -260,7 +260,7 @@
 }
 
 .post-title {
-  @include relative-font-size(4);
+  // @include relative-font-size(4);
   font-weight: 700;
   letter-spacing: -1px;
   line-height: 1;
@@ -268,43 +268,43 @@
   // margin-bottom: 10vh;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
+    // @include relative-font-size(2.25);
   }
 }
 
 .post-content {
   margin-bottom: $spacing-unit;
 
-  h2 {
-    @include relative-font-size(4);
-    font-weight: 700;
+  // h2 {
+  //   @include relative-font-size(4);
+  //   font-weight: 700;
 
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
-    }
-  }
+  //   @include media-query($on-laptop) {
+  //     @include relative-font-size(1.75);
+  //   }
+  // }
 
-  h3 {
-    @include relative-font-size(2.5);
-    font-weight: 700;
+  // h3 {
+  //   @include relative-font-size(2.5);
+  //   font-weight: 700;
 
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.375);
-    }
+  //   @include media-query($on-laptop) {
+  //     @include relative-font-size(1.375);
+  //   }
 
-    @include media-query($on-palm) {
-      @include relative-font-size(1.25);
-    }
-  }
+  //   @include media-query($on-palm) {
+  //     @include relative-font-size(1.25);
+  //   }
+  // }
 
-  h4 {
-    @include relative-font-size(1.875);
-    font-weight: 475;
+  // h4 {
+  //   @include relative-font-size(1.875);
+  //   font-weight: 475;
 
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.25);
-    }
-  }
+  //   @include media-query($on-laptop) {
+  //     @include relative-font-size(1.25);
+  //   }
+  // }
 }
 
 section {

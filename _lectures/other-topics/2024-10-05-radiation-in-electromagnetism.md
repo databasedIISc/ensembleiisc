@@ -23,10 +23,10 @@ Classical Mechanics (as taught in Abhishek’s  lecture or above), Linear Algebr
 
 ## Reading materials
 
-[](https://en.wikipedia.org/wiki/Divergence)
-[](https://en.wikipedia.org/wiki/Curl_(mathematics))
-[](https://en.wikipedia.org/wiki/Gradient)
-[](https://en.wikipedia.org/wiki/Laplace_operator)
-[](https://en.wikipedia.org/wiki/Vector_calculus_identities)
-[](https://en.wikipedia.org/wiki/Dirac_delta_function)
-[](https://en.wikipedia.org/wiki/Maxwell%27s_equations)
+[1](https://en.wikipedia.org/wiki/Divergence)
+[2](https://en.wikipedia.org/wiki/Curl_(mathematics))
+[3](https://en.wikipedia.org/wiki/Gradient)
+[4](https://en.wikipedia.org/wiki/Laplace_operator)
+[5](https://en.wikipedia.org/wiki/Vector_calculus_identities)
+[6](https://en.wikipedia.org/wiki/Dirac_delta_function)
+[7](https://en.wikipedia.org/wiki/Maxwell%27s_equations)

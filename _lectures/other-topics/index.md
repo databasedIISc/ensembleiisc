@@ -1,5 +1,5 @@
 ---
 layout: topic-page
-permalink: '/lectures/others/'
+permalink: '/lectures/other-topics/'
 title: Other Topics
 ---

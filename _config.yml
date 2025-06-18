@@ -87,7 +87,7 @@ defaults:
     values:
       topic: "Quantum Technologies"
   - scope:
-      path: "_lectures/others"
+      path: "_lectures/other-topics"
       type: lectures
     values:
       topic: "Other Topics"
