@@ -14,8 +14,10 @@ picture: /assets/img/random-background.jpg
 </div>
 <ul class="convenor-list">
     {% for person in obj.convenors %}
-    <li>
-        <img src="{{ person.picture }}" alt="{{ person.name }}" class="">
+    <li class="convenor">
+        <div class="person-image">
+            <img src="{{ person.picture | default: '/assets/img/defaults/noprofile.webp' }}" alt="{{ person.name }}" class="">
+        </div>
         <div class="person-info">
             <div>
                 <h4>{{ person.name }}</h4>
@@ -34,7 +36,9 @@ picture: /assets/img/random-background.jpg
 <ul class="member-list">
     {% for person in obj.volunteers %}
     <li>
-        <img src="{{ person.image }}" alt="{{ person.name }}" class="">
+        <div class="person-image">
+            <img src="{{ person.picture | default: '/assets/img/defaults/noprofile.webp' }}" alt="{{ person.name }}" class="">
+        </div>
         <div class="person-info">
             <h4>{{ person.name }}</h4>
             <a href="mailto:{{ person.email }}">{{ person.email }}</a>

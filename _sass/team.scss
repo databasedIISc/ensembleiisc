@@ -1,0 +1,78 @@
+.convenor-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: var(--grid-template);
+    margin: 0;
+    margin-block: $spacing-unit;
+    gap: 2*$spacing-unit;
+
+    .convenor {
+        gap: $spacing-unit;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+        .person-info {
+            align-content: center;
+        }
+
+        .person-image {
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                aspect-ratio: 3/4;
+                border-radius: 5px;
+
+                // &:hover {
+                //     object-fit: contain;
+                // }
+            }
+        }
+
+.team-title {
+    display: flex;
+    align-items: baseline;
+    gap: $spacing-unit;
+
+    h3 {
+        display: inline;
+        width: 20%;
+        margin: 0;
+
+        @include media-query($on-laptop) {
+            width: min-content;
+            gap: 0;
+        }
+    }
+
+    hr {
+        display: inline;
+        width: 100%;
+        height: 0;
+        border: 0;
+        border-bottom: 2px solid #000;
+    }
+}
+
+.volunteers {
+    margin: 3*$spacing-unit 0 $spacing-unit;
+}
+
+.member-list {
+    display: grid;
+    margin: 0;
+    grid-template-columns: var(--grid-template-smaller);
+    gap: 2*$spacing-unit;
+
+    li {
+
+    }
+
+    @include media-query($on-laptop) {
+        grid-template-columns: 1fr;
+    }
+}

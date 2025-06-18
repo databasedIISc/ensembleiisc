@@ -4,21 +4,18 @@ convenors:
     bio:
     email: 
     # picture: "/assets/img/team/2025/ritabrata.webp"
-    picture: "/assets/img/posts/noposter.webp"
 
   - name: "Simar Narula"
     bio:
     email: 
     # picture: "/assets/img/team/2025/simar.webp"
-    picture: "/assets/img/posts/noposter.webp"
 
   - name: "Gunda Sai Vinay"
     bio:
     email: 
     # picture: "/assets/img/team/2025/vinay.webp"
-    picture: "/assets/img/posts/noposter.webp"
 
-# volunteers:
-#   - name: "Volunteer 1"
-#     email: volunteer1@example.com
-#     image: 
+volunteers:
+  # - name: "Volunteer 1"
+  #   email: volunteer1@example.com
+    # picture: 

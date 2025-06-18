@@ -2,7 +2,7 @@
     list-style-type: none;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: var(--grid-template);
     gap: 1.5em;
 
     .item {

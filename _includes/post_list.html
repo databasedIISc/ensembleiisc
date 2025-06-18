@@ -5,7 +5,7 @@
     {% if post %}
         <div>
             <div class="item-image">
-                <img src="{{ post.image | default: '/assets/img/posts/noposter.webp' }}" alt="{{ post.title }}" class="">
+                <img src="{{ post.image | default: '/assets/img/defaults/noposter.webp' }}" alt="{{ post.title }}" class="">
             </div>
             <div class="item-info">
                 <h4>{{ post.title }}</h4>
@@ -27,7 +27,7 @@
             <div class="item-image">
                 {% assign slug = topic | slugify %}
                 {% assign address = '/assets/img/lectures/' | append: slug | append: '.webp' %}
-                <img src="{{ address }}" alt="{{ topic }}" class="" onerror="this.onerror=null;this.src='/assets/img/posts/noposter.webp';">
+                <img src="{{ address }}" alt="{{ topic }}" class="" onerror="this.onerror=null;this.src='/assets/img/defaults/notopic.webp';">
             </div>
             <div class="item-info">
                 <h4>{{ topic }}</h4>

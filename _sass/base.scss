@@ -21,6 +21,11 @@
   --bg: rgb(255, 255, 255);
   --foreground: rgb(0, 0, 0);
 
+  --grid-template: repeat(auto-fill, minmax(350px, 1fr));
+  --grid-template-smaller: repeat(auto-fill, minmax(200px, 1fr));
+
+  --breakpoint: 768px;
+
 }
 
 
@@ -133,3 +138,4 @@ main{
 
 @import "index";
 @import "post";
+@import "team";
