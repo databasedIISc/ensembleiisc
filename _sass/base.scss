@@ -142,10 +142,25 @@ main{
     color: white;
     background-size:  cover;
     background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     align-content: end;
     position: relative;
 
     text-shadow: 0 0 20px black;
+
+    @include media-query($on-laptop) {
+      height: 60svh;
+    }
+
+    @include media-query($on-palm) {
+      height: 40svh;
+
+      .post-title {
+        font-size: var(--size-3);
+        margin-top: $spacing-unit;
+      }
+    }
 }
 
 @include media-query($on-palm) {
