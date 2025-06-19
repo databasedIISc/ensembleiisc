@@ -148,6 +148,12 @@ main{
     text-shadow: 0 0 20px black;
 }
 
+@include media-query($on-palm) {
+  .page-has-picture {
+    height: 40svh;
+  }
+}
+
 
 @import "index";
 @import "post";
