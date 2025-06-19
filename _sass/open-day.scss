@@ -1,0 +1,14 @@
+.open-day {
+    columns: 350px;
+    column-gap: 1em;
+
+    img {
+        margin-bottom: 1em;
+    }
+}
+
+// @include media-query($on-palm) {
+//     .open-day {
+//         columns: 1;
+//     }
+// }

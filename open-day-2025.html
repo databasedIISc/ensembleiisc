@@ -4,14 +4,9 @@ title: Open Day 2025
 permalink: /open-day-2025/
 order: 6
 ---
-<div class="open-day-2025-wrapper">
-    <img src="/assets/img/posts/noposter.webp" alt="Open Day Image" class="open-day-2025-image">
-    <img src="/assets/img/posts/noposter.webp" alt="Open Day Image" class="open-day-2025-image">
-    <img src="/assets/img/posts/noposter.webp" alt="Open Day Image" class="open-day-2025-image">
-    <img src="/assets/img/posts/noposter.webp" alt="Open Day Image" class="open-day-2025-image">
-    <img src="/assets/img/posts/noposter.webp" alt="Open Day Image" class="open-day-2025-image">
-    <img src="/assets/img/posts/noposter.webp" alt="Open Day Image" class="open-day-2025-image">
-    <img src="/assets/img/posts/noposter.webp" alt="Open Day Image" class="open-day-2025-image">
-    <img src="/assets/img/posts/noposter.webp" alt="Open Day Image" class="open-day-2025-image">
-    <img src="/assets/img/posts/noposter.webp" alt="Open Day Image" class="open-day-2025-image">
+<div class="open-day">
+    {% assign open_day_images = site.static_files | where_exp: "file", "file.path contains '/assets/img/open_day/'" %}
+    {% for image in open_day_images %}
+      <img src="{{ image.path }}" alt="Open Day Image">
+    {% endfor %}
 </div>

@@ -135,7 +135,21 @@ main{
   }
 }
 
+// Picture header
+
+.page-has-picture {
+    height: 80svh;
+    color: white;
+    background-size:  cover;
+    background-position: center;
+    align-content: end;
+    position: relative;
+
+    text-shadow: 0 0 20px black;
+}
+
 
 @import "index";
 @import "post";
 @import "team";
+@import "open-day";

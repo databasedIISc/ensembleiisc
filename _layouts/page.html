@@ -1,17 +1,21 @@
 ---
 layout: default
 ---
-<article class="post container">
 
-  {% if page.picture %}
-  <header class="post-header">
+{% if page.picture %}
+<header class="post-header page-has-picture" style="background-image: url('{{ page.picture }}');">
+  <div class="container">
     <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
-  {% else %}
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
-  {% endif %}
+  </div>
+</header>
+<article class="post container">
+{% else %}
+<article class="post container">
+<header class="post-header">
+  <h1 class="post-title">{{ page.title | escape }}</h1>
+</header>
+{% endif %}
+
 
   <div class="post-content">
     {{ content }}
