@@ -15,23 +15,23 @@
     }
 }
 
-        .person-info {
-            align-content: center;
-        }
+.person-info {
+    align-content: center;
+}
 
-        .person-image {
-            img {
-                width: 100%;
-                height: auto;
-                object-fit: cover;
-                aspect-ratio: 3/4;
-                border-radius: 5px;
+.person-image {
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 3/4;
+        border-radius: 5px;
 
-                // &:hover {
-                //     object-fit: contain;
-                // }
-            }
-        }
+        // &:hover {
+        //     object-fit: contain;
+        // }
+    }
+}
 
 .team-title {
     display: flex;
@@ -67,10 +67,6 @@
     margin: 0;
     grid-template-columns: var(--grid-template-smaller);
     gap: 2*$spacing-unit;
-
-    li {
-
-    }
 
     @include media-query($on-laptop) {
         grid-template-columns: 1fr;
