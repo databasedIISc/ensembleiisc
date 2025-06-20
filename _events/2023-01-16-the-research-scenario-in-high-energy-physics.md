@@ -1,5 +1,5 @@
 ---
-title: The Research Scenario in High Energy Physics: Theory, Problems, Techniques - Talk by Professor Sunil Mukhi
+title: The Research Scenario in High Energy Physics-Theory, Problems, Techniques - Talk by Professor Sunil Mukhi
 author: Prof. Sunil Mukhi
 layout: post
 ---

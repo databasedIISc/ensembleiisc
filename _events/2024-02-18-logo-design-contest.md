@@ -4,7 +4,6 @@ layout: post
 image: /assets/img/events/logo-design-contest/poster.webp
 ---
 
-A Contest to design the logo of Ensemble
 
 <!--more-->
 

@@ -11,4 +11,4 @@ Announcement regarding February edition of Ensemble Newsletter
 We present to you our first edition of our monthly newsletter - Ensemble.
 A short, fun read which is perfect for your Saturday afternoon.
 
-[Newsletter]()
+[Newsletter](https://indianinstituteofscience.sharepoint.com/:b:/s/ASCENDTalks/EVReMSht3XRNnM6ZdewW40UBDbF3F2PbBJesoskYEiCTjw?e=vTf8Im)
