@@ -5,7 +5,7 @@ author: Debadrito Roy
 slides: https://indianinstituteofscience.sharepoint.com/:b:/s/ASCENDTalks/EWSQkSjJlVJHqtHSJUSiJKwBeo9cccor8Z1ROe5186anBQ
 ---
 
-Debadrito posts Master's Thesis defence of his groupmate.
+Debadrito posts Master's Thesis defence of his groupmate
 
 <!--more-->
 
