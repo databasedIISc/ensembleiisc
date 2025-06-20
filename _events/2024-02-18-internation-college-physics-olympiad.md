@@ -1,7 +1,6 @@
 ---
 title: International College Physics Olympiad 
 layout: post
-image: /assets/img/events/logo-design-contest/poster.webp
 ---
 
 <!--more-->
