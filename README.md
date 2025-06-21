@@ -7,6 +7,8 @@ To buid the website locally, follow the instructions provided on the [Jekyll doc
 ```bash
 bundle install && bundle exec jekyll serve
 ```
+> [!IMPORTANT]
+> Please make sure to not commit your `Gemfile.lock`.
 
 ## Adding New Lectures
 
