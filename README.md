@@ -8,7 +8,7 @@ To buid the website locally, follow the instructions provided on the [Jekyll doc
 bundle install && bundle exec jekyll serve
 ```
 > [!IMPORTANT]
-> Please make sure to not commit your `Gemfile.lock`.
+> Please make sure to not commit your `Gemfile.lock`. Your PR won't be accepted if you do.
 
 ## Adding New Lectures
 
