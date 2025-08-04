@@ -3,12 +3,12 @@ name: Deployment Success Check
 on:
     pull_request:
         branches: ["main"]
-        types: opened
+        types: [opened, edited, reopened, closed]
     workflow_dispatch:
 
 jobs:
     build_test:
-      uses: ./.github/workflows/jekyll.yml
+      uses: ./.github/workflows/build.yml
       with: {}
     
     check_success:
