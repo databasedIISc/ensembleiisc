@@ -101,3 +101,89 @@ order: 1
 
 </section>
 
+<section id="posts">
+<div class="section container">
+
+<h2 class="section-title">Featured Posts</h2>
+<div class="latests swiper">
+  <ul class="latest-items swiper-items" id="latest-posts">
+    {% assign unsorted_posts = site.lectures | concat: site.events %}
+    {% assign filtered_posts = unsorted_posts | where_exp: "post", "post.layout != 'topic-page'" %}
+    {% assign featured_posts = filtered_posts | where_exp: "post", "post.tags contains 'featured'" %}
+    {% assign posts = featured_posts | sort: 'date' | reverse %}
+    {% for post in posts limit:6 %}
+    <li class="latest">
+      <div class="latest-info">
+        <datetime datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ post.date | date: "%d %b %Y" | upcase }}
+        </datetime>
+        <h3>
+          {{ post.title | escape }}
+        </h3>
+        <p>
+          {{ post.excerpt | strip_html | truncate: 150, '...' }}
+        </p>
+        <div class="">
+          <a href="{{ post.url }}" class="btn btn-dark"><span class="material-symbols-outlined norm">arrow_forward</span> Read more</a>
+        </div>
+      </div>
+      <div class="latest-banner">
+        <img src="{{ post.image | default: '/assets/img/defaults/noposter.webp' }}" alt="{{ post.title }}" class="post-img">
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="options">
+    <div class="controls swiper-controls">
+      <button class="prev btn btn-dark"><span class="material-symbols-outlined large">arrow_back</span></button>
+      <button class="next btn btn-dark"><span class="material-symbols-outlined large">arrow_forward</span></button>
+    </div>
+    <div class="extra-links">
+      <a href="{{ site.baseurl }}/events" class="btn btn-dark"><span class="material-symbols-outlined">arrow_forward</span> All Events</a>
+      <a href="{{ site.baseurl }}/lectures" class="btn btn-dark"><span class="material-symbols-outlined">arrow_forward</span> All Lectures</a>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+</section>
+
+<section id="newsletter">
+<div class="section container">
+  <h2 class="section-title">Newsletter</h2>
+  <p class="section-subtitle">Subscribe to our newsletter to get the latest updates on our events and lectures.</p>
+  </div>
+</section>
+
+<section id="open-day">
+  <div class="section container">
+
+<h2 class="section-title">Open Day</h2>
+<div class="latests swiper">
+  <ul class="latest-items swiper-items mb-3" id="latest-open-day">
+    <li class="latest">
+      <div class="latest-banner">
+        <img src="/assets/img/open_day/OneDrive_1_8-3-2025/Braess' Paradox (2).jpg" alt="{{ post.title }}" class="post-img">
+      </div>
+    </li>
+    <li class="latest">
+      <div class="latest-banner">
+        <img src="/assets/img/open_day/OneDrive_1_8-3-2025/Chiral Spiral Open Day (3).png" alt="{{ post.title }}" class="post-img">
+      </div>
+    </li>
+  </ul>
+  <div class="options">
+    <div class="controls swiper-controls">
+      <button class="prev btn btn-dark"><span class="material-symbols-outlined large">arrow_back</span></button>
+      <button class="next btn btn-dark"><span class="material-symbols-outlined large">arrow_forward</span></button>
+    </div>
+    <div class="extra-links">
+      <a href="{{ site.baseurl }}/events" class="btn btn-dark"><span class="material-symbols-outlined">arrow_forward</span> All Events</a>
+      <a href="{{ site.baseurl }}/lectures" class="btn btn-dark"><span class="material-symbols-outlined">arrow_forward</span> All Lectures</a>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</section>
