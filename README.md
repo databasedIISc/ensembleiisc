@@ -8,7 +8,7 @@ To buid the website locally, follow the instructions provided on the [Jekyll doc
 bundle install && bundle exec jekyll serve
 ```
 > [!IMPORTANT]
-> Please make sure to not commit your `Gemfile.lock`. Your PR won't be accepted if you do.
+> Please make sure to not commit your `Gemfile.lock`. Also, make sure test.yml passes. It is checked at PR.
 
 ## Adding New Lectures
 
