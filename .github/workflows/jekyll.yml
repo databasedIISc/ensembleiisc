@@ -13,6 +13,10 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  workflow_call:
+    outputs:
+      success:
+        value: ${{ jobs.build.outputs.success }}
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -30,6 +34,8 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    outputs:
+      success: ${{ steps.build_result.outputs.success }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -51,6 +57,13 @@ jobs:
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
+      - name: Set build result
+        id: build_result
+        run: |
+          if [ -d "_site" ]; then
+            echo "success=true" >> $GITHUB_OUTPUT
+          fi
+            echo "success=false" >> $GITHUB_OUTPUT
 
   # Deployment job
   deploy:
