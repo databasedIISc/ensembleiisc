@@ -1,5 +1,7 @@
 # Ensemble Website
 
+[![Deployment](https://github.com/databasedIISc/ensembleiisc/actions/workflows/jekyll.yml/badge.svg)](https://github.com/databasedIISc/ensembleiisc/actions/workflows/jekyll.yml)
+
 ## Build with Jekyll
 
 To buid the website locally, follow the instructions provided on the [Jekyll documentation](https://jekyllrb.com/docs/). If you have jekyll pre-installed, you can simply run
