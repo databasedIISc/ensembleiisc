@@ -25,6 +25,7 @@ jobs:
             - name: Check Deployment
               run: bundle exec jekyll build
               env:
+               GITHUB_PAGES: false
                JEKYLL_ENV: production
             - name: Verify Deployment
               run: |
