@@ -38,5 +38,6 @@ jobs:
         run: |
           if [ -d "_site" ]; then
             echo "success=true" >> $GITHUB_OUTPUT
-          fi
+          else
             echo "success=false" >> $GITHUB_OUTPUT
+          fi
