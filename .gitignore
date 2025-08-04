@@ -5,4 +5,4 @@ _site
 vendor
 _themefiles
 .DS_Store
-.ruby-version
+# .ruby-version
