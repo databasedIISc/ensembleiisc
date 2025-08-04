@@ -16,6 +16,10 @@ gem "json", "~> 2.10.2"
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
+
+# Add a sass converter for Jekyll
+# gem "jekyll-sass-converter", "~> 3.0"  # Uses sass-embedded
+
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-seo-tag", "~> 2.6"
@@ -23,16 +27,16 @@ end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
-platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", ">= 1", "< 3"
-  gem "tzinfo-data"
-end
+# platforms :mingw, :x64_mingw, :mswin, :jruby do
+#   gem "tzinfo", ">= 1", "< 3"
+#   gem "tzinfo-data"
+# end
 
 # Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
+# gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
 # do not have a Java counterpart.
-gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
-gem 'jekyll-watch'
+# gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+# gem 'jekyll-watch'
 
