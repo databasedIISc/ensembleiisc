@@ -2,6 +2,7 @@
 title: Introduction to Cosmology - The Friedmann equation, Benchmark Model and Inflation
 author: Aritra Das
 layout: post
+tags: [featured,]
 ---
 
 Experience the wonders that modern cosmology has to offer, in terms of the physics behind it and of course, the beautiful math!

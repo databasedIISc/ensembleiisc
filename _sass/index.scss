@@ -66,11 +66,12 @@
 .section-title {
     --section-border: 2px solid var(--foreground);
     margin: 0;
-    writing-mode: sideways-lr;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
     min-height: 60svh;
     position: relative;
     // text-align: center;
-    border-right: var(--section-border);
+    border-left: var(--section-border);
     // &::after {
     //     content: '';
     //     width: 2px;
@@ -130,6 +131,22 @@
         flex-grow: 1;
         datetime {
             font-size: var(--size-1);
+        }
+    }
+}
+
+#latest-open-day {
+    .latest {
+        width: 100%;
+        overflow: hidden;
+
+        .latest-banner {
+            width: 100%;
+            img {
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
         }
     }
 }
