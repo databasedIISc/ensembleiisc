@@ -162,16 +162,13 @@ order: 1
 <h2 class="section-title">Open Day</h2>
 <div class="latests swiper">
   <ul class="latest-items swiper-items mb-3" id="latest-open-day">
+    {% for filename in site.data.openday %}
     <li class="latest">
       <div class="latest-banner">
-        <img src="/assets/img/open_day/OneDrive_1_8-3-2025/Braess' Paradox (2).jpg" alt="{{ post.title }}" class="post-img">
+        <img src="/assets/img/open_day/OneDrive_1_8-3-2025/{{ filename }}" alt="{{ filename | split: '.' | first | replace: '-', ' ' }}" class="post-img">
       </div>
     </li>
-    <li class="latest">
-      <div class="latest-banner">
-        <img src="/assets/img/open_day/OneDrive_1_8-3-2025/Chiral Spiral Open Day (3).png" alt="{{ post.title }}" class="post-img">
-      </div>
-    </li>
+    {% endfor %}
   </ul>
   <div class="options">
     <div class="controls swiper-controls">
