@@ -1,7 +1,7 @@
 ---
 title: Paper Presentation
 layout: post
-author: Simar Narula
+author: Ritabrata Ghosh
 image: /assets/img/events/paper-presentation/poster.webp
 ---
 
