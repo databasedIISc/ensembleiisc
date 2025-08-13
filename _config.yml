@@ -88,6 +88,11 @@ defaults:
     values:
       topic: "Quantum Technologies"
   - scope:
+      path: "_lectures/classical-mechanics"
+      type: lectures
+    values:
+      topic: "Classical Mechanics"
+  - scope:
       path: "_lectures/other-topics"
       type: lectures
     values:
