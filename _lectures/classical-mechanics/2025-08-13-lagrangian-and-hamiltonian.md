@@ -19,3 +19,5 @@ Speaker: **Sriraj Chandra (3rd Year UG)**
 Date: **13th August (Wednesday)**  
 Time: **9:30 PM**  
 Venue: **F-08A, OPB**  
+
+> Lecture notes, link to the video, and pictures taken during session can be found in [this folder](https://indianinstituteofscience-my.sharepoint.com/:f:/g/personal/vidhic_iisc_ac_in/EpmYqJFv8LtJmBmJ01KLxTUBDzJ9P5_FEQ-fObU5zDYipA?e=qRhFpN).
