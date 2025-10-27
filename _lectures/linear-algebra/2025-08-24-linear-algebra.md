@@ -18,4 +18,4 @@ Date: **24th August (Sunday)**
 Time: **9:30 PM**  
 Venue: **F-08A, OPB**  
 
-> Notes and lecture video can be found in (this folder)[https://indianinstituteofscience-my.sharepoint.com/:f:/g/personal/vidhic_iisc_ac_in/EkbsoE9glLNAqjQ61Qyp2WkBEwvxRQ3gNen6E2KtItNkXQ?e=iNm2ve]
+> Notes and lecture video can be found in [this folder](https://indianinstituteofscience-my.sharepoint.com/:f:/g/personal/vidhic_iisc_ac_in/EkbsoE9glLNAqjQ61Qyp2WkBEwvxRQ3gNen6E2KtItNkXQ?e=iNm2ve)
