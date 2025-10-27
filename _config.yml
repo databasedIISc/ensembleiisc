@@ -93,6 +93,11 @@ defaults:
     values:
       topic: "Classical Mechanics"
   - scope:
+      path: "_lectures/linear-algebra"
+      type: lectures
+    values:
+      topic: "Linear Algebra"
+  - scope:
       path: "_lectures/other-topics"
       type: lectures
     values:
