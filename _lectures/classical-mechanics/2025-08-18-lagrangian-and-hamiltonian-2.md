@@ -3,6 +3,7 @@ title: Lagrangian and Hamiltonian Formalism 2
 author: Sriraj Chandra
 layout: post
 image: /assets/img/posts/lagrangian_and_hamiltonian_2/poster.webp
+video: https://youtu.be/klJSRlUfLsI?si=Zlotr5vaJj31iMkH
 # topic: "Classical Mechanics"    
 ---
 
