@@ -4,6 +4,7 @@ author: Simar Narula
 layout: post
 image: /assets/img/posts/differential_geometry/poster.webp
 slides: /assets/files/DiffGeoLecture1_Simar.pdf
+video: https://youtu.be/a_8zGUC_7vw?si=fVWmosVBP34Q6eUX
 # topic: "Differential Geometry"    
 ---
 
