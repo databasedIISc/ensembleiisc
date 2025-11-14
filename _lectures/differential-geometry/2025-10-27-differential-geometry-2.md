@@ -3,6 +3,7 @@ title: Differential Geometry 2
 author: Simar Narula
 layout: post
 image: /assets/img/posts/differential_geometry_2/poster.webp
+slides: /assets/files/Diff-Geo-lec2.pdf
 # topic: "Differential Geometry"    
 ---
 
