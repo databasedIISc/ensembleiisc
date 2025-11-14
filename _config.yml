@@ -108,6 +108,16 @@ defaults:
     values:
       topic: "Differential Geometry"
   - scope:
+      path: "_lectures/group-theory"
+      type: lectures
+    values:
+      topic: "Group Theory"
+  - scope:
+      path: "_lectures/quantum-mechanics"
+      type: lectures
+    values:
+      topic: "Quantum Mechanics"
+  - scope:
       path: "_lectures/other-topics"
       type: lectures
     values:
