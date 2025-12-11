@@ -88,6 +88,36 @@ defaults:
     values:
       topic: "Quantum Technologies"
   - scope:
+      path: "_lectures/classical-mechanics"
+      type: lectures
+    values:
+      topic: "Classical Mechanics"
+  - scope:
+      path: "_lectures/linear-algebra"
+      type: lectures
+    values:
+      topic: "Linear Algebra"
+  - scope:
+      path: "_lectures/special-relativity"
+      type: lectures
+    values:
+      topic: "Special Relativity"
+  - scope:
+      path: "_lectures/differential-geometry"
+      type: lectures
+    values:
+      topic: "Differential Geometry"
+  - scope:
+      path: "_lectures/group-theory"
+      type: lectures
+    values:
+      topic: "Group Theory"
+  - scope:
+      path: "_lectures/quantum-mechanics"
+      type: lectures
+    values:
+      topic: "Quantum Mechanics"
+  - scope:
       path: "_lectures/other-topics"
       type: lectures
     values:
