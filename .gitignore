@@ -6,3 +6,4 @@ vendor
 _themefiles
 .DS_Store
 # .ruby-version
+bower_components

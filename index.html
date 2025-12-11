@@ -9,21 +9,35 @@ order: 1
 ---
 
 <section id="intro">
-  <div class="container">
-    <picture id="intro-banner">
-      <source class="img img-fluid" srcset="/assets/img/home/banner_small.webp" type="image/webp" media="(width <= 768px)">
-      <img class="img img-fluid" src="/assets/img/home/banner.webp">
-    </picture>
+  <div class="scanlines"></div>
+
+  <div class="hero-image">
+    <img src="{{ '/assets/img/home/blackhole.webp' | relative_url }}" alt="Ensemble Logo" class="logo">
   </div>
-  <div class="intro-text">
-    <div class="container">
-      <h3 class="intro-title">/// Who we are</h3>
-      <div class="">
-        <p>
-          A community of college students with one commonality - a crazy curiosity about this convulated concoction we call our universe.
-        </p>
-        <a href="/about" class="btn btn-light">Learn more</a>
+  <div class="container hero-banner">
+    <div class="hero-text">
+      <svg style="display: none;">
+        <defs>
+            <filter id="noiseFilter">
+                <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+                <feColorMatrix type="saturate" values="0"/>
+            </filter>
+        </defs>
+    </svg>
+
+        <div class="background-dust"></div>
+        <div class="noise-overlay" style="filter: url(#noiseFilter) opacity(0.3);"></div>
+
+      <h1 class="hero-title glow">
+        {% include logo_svg.html %}
+    </h1>
+      <!-- <h3 class="hero-subtitle">The Undergraduate Physics Club of IISc</h3> -->
     </div>
+    <div class="hero-desc">
+      <div class="hero-desc-keyword boxglow">About Us</div>
+      <p class="hero-desc-text">
+        Ensemble is the undergraduate physics club of IISc: a community of college students with one commonality - a crazy curiosity about this convulated concoction we call our universe. 
+      </p>
     </div>
   </div>
 </section>
@@ -38,19 +52,19 @@ order: 1
     {% assign filtered_posts = unsorted_posts | where_exp: "post", "post.layout != 'topic-page'" %}
     {% assign posts = filtered_posts | sort: 'date' | reverse %}
     {% for post in posts limit:6 %}
-    <li class="latest">
+    <li class="latest glow-card">
       <div class="latest-info">
         <datetime datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
           {{ post.date | date: "%d %b %Y" | upcase }}
         </datetime>
-        <h3>
+        <h3 class="latest-title glow">
           {{ post.title | escape }}
         </h3>
         <p>
           {{ post.excerpt | strip_html | truncate: 150, '...' }}
         </p>
-        <div class="">
-          <a href="{{ post.url }}" class="btn btn-dark"><span class="material-symbols-outlined norm">arrow_forward</span> Read more</a>
+        <div class="read-more">
+          <a href="{{ post.url }}" class="boxglow"><span class="material-symbols-outlined norm">arrow_forward</span> Read more</a>
         </div>
       </div>
       <div class="latest-banner">
@@ -61,12 +75,12 @@ order: 1
   </ul>
   <div class="options">
     <div class="controls swiper-controls">
-      <button class="prev btn btn-dark"><span class="material-symbols-outlined large">arrow_back</span></button>
-      <button class="next btn btn-dark"><span class="material-symbols-outlined large">arrow_forward</span></button>
+      <button class="prev btn btn-dark glow"><span class="material-symbols-outlined large">arrow_back</span></button>
+      <button class="next btn btn-dark glow"><span class="material-symbols-outlined large">arrow_forward</span></button>
     </div>
     <div class="extra-links">
-      <a href="{{ site.baseurl }}/events" class="btn btn-dark"><span class="material-symbols-outlined">arrow_forward</span> All Events</a>
-      <a href="{{ site.baseurl }}/lectures" class="btn btn-dark"><span class="material-symbols-outlined">arrow_forward</span> All Lectures</a>
+      <a href="{{ site.baseurl }}/events" class="btn btn-dark glow"><span class="material-symbols-outlined">arrow_forward</span> All Events</a>
+      <a href="{{ site.baseurl }}/lectures" class="btn btn-dark glow"><span class="material-symbols-outlined">arrow_forward</span> All Lectures</a>
     </div>
   </div>
   </div>
@@ -106,25 +120,25 @@ order: 1
 
 <h2 class="section-title">Featured Posts</h2>
 <div class="latests swiper">
-  <ul class="latest-items swiper-items" id="latest-posts">
+  <ul class="latest-items swiper-items" id="featured-posts">
     {% assign unsorted_posts = site.lectures | concat: site.events %}
     {% assign filtered_posts = unsorted_posts | where_exp: "post", "post.layout != 'topic-page'" %}
     {% assign featured_posts = filtered_posts | where_exp: "post", "post.tags contains 'featured'" %}
     {% assign posts = featured_posts | sort: 'date' | reverse %}
     {% for post in posts limit:6 %}
-    <li class="latest">
+    <li class="latest glow-card">
       <div class="latest-info">
         <datetime datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
           {{ post.date | date: "%d %b %Y" | upcase }}
         </datetime>
-        <h3>
+        <h3 class="glow">
           {{ post.title | escape }}
         </h3>
         <p>
           {{ post.excerpt | strip_html | truncate: 150, '...' }}
         </p>
-        <div class="">
-          <a href="{{ post.url }}" class="btn btn-dark"><span class="material-symbols-outlined norm">arrow_forward</span> Read more</a>
+        <div class="read-more">
+          <a href="{{ post.url }}" class="boxglow"><span class="material-symbols-outlined norm">arrow_forward</span> Read more</a>
         </div>
       </div>
       <div class="latest-banner">
@@ -135,12 +149,12 @@ order: 1
   </ul>
   <div class="options">
     <div class="controls swiper-controls">
-      <button class="prev btn btn-dark"><span class="material-symbols-outlined large">arrow_back</span></button>
-      <button class="next btn btn-dark"><span class="material-symbols-outlined large">arrow_forward</span></button>
+      <button class="prev btn btn-dark glow"><span class="material-symbols-outlined large">arrow_back</span></button>
+      <button class="next btn btn-dark glow"><span class="material-symbols-outlined large">arrow_forward</span></button>
     </div>
     <div class="extra-links">
-      <a href="{{ site.baseurl }}/events" class="btn btn-dark"><span class="material-symbols-outlined">arrow_forward</span> All Events</a>
-      <a href="{{ site.baseurl }}/lectures" class="btn btn-dark"><span class="material-symbols-outlined">arrow_forward</span> All Lectures</a>
+      <a href="{{ site.baseurl }}/events" class="btn btn-dark glow"><span class="material-symbols-outlined">arrow_forward</span> All Events</a>
+      <a href="{{ site.baseurl }}/lectures" class="btn btn-dark glow"><span class="material-symbols-outlined">arrow_forward</span> All Lectures</a>
     </div>
   </div>
   </div>
@@ -162,25 +176,22 @@ order: 1
 <h2 class="section-title">Open Day</h2>
 <div class="latests swiper">
   <ul class="latest-items swiper-items mb-3" id="latest-open-day">
-    <li class="latest">
+{% assign all_posters = site.static_files | where_exp: "file", "file.path contains '/assets/img/open_day/posters/'" %}
+{% for poster in all_posters %}
+    <li class="latest glow-card">
       <div class="latest-banner">
-        <img src="/assets/img/open_day/OneDrive_1_8-3-2025/Braess' Paradox (2).jpg" alt="{{ post.title }}" class="post-img">
+        <img src="{{ poster.path | relative_url }}" alt="{{ poster.name }}" class="post-img">
       </div>
     </li>
-    <li class="latest">
-      <div class="latest-banner">
-        <img src="/assets/img/open_day/OneDrive_1_8-3-2025/Chiral Spiral Open Day (3).png" alt="{{ post.title }}" class="post-img">
-      </div>
-    </li>
+{% endfor %}
   </ul>
   <div class="options">
     <div class="controls swiper-controls">
-      <button class="prev btn btn-dark"><span class="material-symbols-outlined large">arrow_back</span></button>
-      <button class="next btn btn-dark"><span class="material-symbols-outlined large">arrow_forward</span></button>
+      <button class="prev btn btn-dark glow"><span class="material-symbols-outlined large">arrow_back</span></button>
+      <button class="next btn btn-dark glow"><span class="material-symbols-outlined large">arrow_forward</span></button>
     </div>
     <div class="extra-links">
-      <a href="{{ site.baseurl }}/events" class="btn btn-dark"><span class="material-symbols-outlined">arrow_forward</span> All Events</a>
-      <a href="{{ site.baseurl }}/lectures" class="btn btn-dark"><span class="material-symbols-outlined">arrow_forward</span> All Lectures</a>
+      <a href="{{ site.baseurl }}/open-day-2025" class="btn btn-dark glow"><span class="material-symbols-outlined">arrow_forward</span> All Posters</a>
     </div>
   </div>
   </div>

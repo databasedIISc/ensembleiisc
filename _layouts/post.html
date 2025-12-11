@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-<article class="post h-entry container" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post h-entry container nav-height-adjust">
 <div class="row">
   <div class="col-12 col-md-8">
      <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="post-title p-name glow" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -26,18 +26,18 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
   </div>
-  <div class="col-12 col-md-4">
+  <div class="col-12 col-md-4 gap">
     {% if page.image %}
     <img src="{{ page.image | default: '/assets/img/posts/noposter.webp' }}" alt="{{ page.title }}" class="img img-fluid" itemprop="image">
     {% endif %}
           <p class="post-media">
         {%- if page.video -%}
-          <a href="{{ page.video }}" target="_blank"><span class="material-symbols-outlined">play_arrow</span> Watch on YouTube</a>
+          <a class="boxglow" href="{{ page.video }}" target="_blank"><span class="material-symbols-outlined">play_arrow</span> Watch on YouTube</a>
         {%- endif -%}
         </p>
       <p class="post-media">
       {%- if page.slides -%}
-        <a href="{{ page.slides }}" target="_blank"><span class="material-symbols-outlined">import_contacts</span> Lecture Materials</a>
+        <a class="boxglow" href="{{ page.slides }}" target="_blank"><span class="material-symbols-outlined">import_contacts</span> Lecture Materials</a>
       {%- endif -%}
       </p>
   </div>

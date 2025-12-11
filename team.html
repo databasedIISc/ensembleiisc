@@ -3,27 +3,27 @@ layout: page
 title: Team
 permalink: /team/
 order: 2
-picture: /assets/img/open_day/team.webp
+picture: /assets/img/open_day/gallery/team.webp
 ---
 {% for object in site.data.team reversed %}
 {% assign obj = object[1] %}
 <h2 class="year-of-service">{{ obj.year }}</h2>
 <div class="team-title">    
     <h3>Convenors</h3>
-    <hr>
+    <!-- <hr class="hr-glow"> -->
 </div>
-<ul class="convenor-list">
+<ul class="convenor-list item-list">
     {% for person in obj.convenors %}
-    <li class="convenor">
-        <div class="person-image">
+    <li class="convenor item glow-card">
+        <div class="person-image item-image">
             <img src="{{ person.picture | default: '/assets/img/defaults/noprofile.webp' }}" alt="{{ person.name }}" class="">
         </div>
         <div class="person-info">
             <div>
-                <h4>{{ person.name }}</h4>
+                <h4 class="glow">{{ person.name }}</h4>
                 {% if person.bio %}<p>{{ person.bio }}</p>{%- endif -%}
             </div>
-            <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+            <a class="email" href="mailto:{{ person.email }}">{{ person.email }}</a>
         </div>
     </li>
     {% endfor %}
@@ -33,15 +33,18 @@ picture: /assets/img/open_day/team.webp
     <h3>Volunteers</h3>
     <hr>
 </div>
-<ul class="member-list">
+<ul class="member-list item-list">
     {% for person in obj.volunteers %}
-    <li>
-        <div class="person-image">
+    <li class="item glow-card">
+        {% if person.picture %}
+        <div class="person-image item-image">
             <img src="{{ person.picture | default: '/assets/img/defaults/noprofile.webp' }}" alt="{{ person.name }}" class="">
         </div>
+        {% endif %}
         <div class="person-info">
-            <h4>{{ person.name }}</h4>
-            <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+            <h4 class="glow">{{ person.name }}</h4>
+            {% if person.role %}<p>{{ person.role }}</p>{%- endif -%}
+            <a class="email" href="mailto:{{ person.email }}">{{ person.email }}</a>
         </div>
     </li>
     {% endfor %}

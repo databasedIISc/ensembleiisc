@@ -12,20 +12,22 @@ On this occasion, the UG physics club presented its own platter of relishing exh
 <br>
 A list of the experiments performed are given below, followed by the pictures of our volunteers and conveners in action!</p>
 
-    <ul style="list-style-type:circle;">
-        <li>Path of an Electron</li>
-        <li>Lenz's Law</li>
-        <li>Barberpole Effect</li>
-        <li>Levitation using Meissner's Effect</li>
-        <li>Magic Dropper (Pascal's Law)</li>
-        <li>Lissajous Figures</li>
-        <li>Chladni's Plate Experiment</li>
-        <li>Braess's Paradox in physical system</li>
-	<li>Zeeman Splitting</li>
-    </ul>
-<div class="open-day">
-    {% assign open_day_images = site.static_files | where_exp: "file", "file.path contains '/assets/img/open_day/'" %}
-    {% for image in open_day_images %}
-      <img src="{{ image.path }}" alt="Open Day Image">
-    {% endfor %}
-</div>
+<section>
+    <h2 class="section-title">Posters</h2>
+    <div class="image-board">
+        {% assign open_day_posters = site.static_files | where_exp: "file", "file.path contains '/assets/img/open_day/posters/'" %}
+        {% for poster in open_day_posters %}
+          <img src="{{ poster.path }}" alt="{{ poster.name }}">
+        {% endfor %}
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Gallery</h2>
+    <div class="image-board">
+        {% assign open_day_images = site.static_files | where_exp: "file", "file.path contains '/assets/img/open_day/gallery/'" %}
+        {% for image in open_day_images %}
+          <img src="{{ image.path }}" alt="Open Day Image">
+        {% endfor %}
+    </div>
+</section>

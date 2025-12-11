@@ -15,15 +15,13 @@ $background-color: #ffffff !default;
 $brand-color:      #2c7be1 !default;
 
 $grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
 
 $table-text-align: left !default;
 
 // Width of the content area
 $content-width:    1080px !default;
 
-$on-palm:          600px !default;
+$on-palm:          786px !default;
 $on-laptop:        1080px !default;
 
 // Use media queries like this:
@@ -43,9 +41,9 @@ $on-laptop:        1080px !default;
   font-size: $base-font-size * $ratio;
 }
 
-// Import partials.
-@import
-  "minima/base",
-  "minima/layout",
-  "minima/syntax-highlighting"
-;
+// // Import partials.
+// @import
+//   "minima/base",
+//   "minima/layout",
+//   "minima/syntax-highlighting"
+// ;

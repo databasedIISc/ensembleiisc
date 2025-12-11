@@ -1,33 +1,46 @@
-<footer class="site-footer h-card">
+<footer class="site-footer h-card container">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-  <div class="wrapper">
+  <div class="footerbox">
+    
+    <div class="footer-left">
+      <h1 style="position: relative;">
+        {% include logo_svg.html %}
+        <div class="scanlines"></div>
+      </h1>
+      <h3> The Undergraduate Physics Club of IISc</h3>
+      <p class="">&copy; 2025 Ensemble IISc. All Rights Reserved.</p>
+    </div>
+    <div class="footer-right glow-card">
+      <div>
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
+        <h3>
+          Ensemble IISc
+        </h3>
+        <p>
+          A community of college students with one commonality - a crazy curiosity about this convulated concoction we call our universe.
+        </p>
+        <p>
+          This website has been designed to represent the highly energetic, glowing and bright personalities of the members of the club and is inspired Cowboy Bebop and the Golden Era theme on Hyperland. Hope you like it!
+        </p>
+        <p>
+          Created with 💖 by Ensemble Developement Team 2025.
+        </p>
+      </div>
+      <div>
+        <h4>Connect with Us</h4>
+        <ul class="social-links">
+          <li>
+            <a class="boxglow" href="mailto:ensemble.iisc@gmail.com">Email</a>
+          </li>
+          <li>
+            <a class="boxglow" href="https://www.instagram.com/ensemble.iisc/">Instagram</a>
+          </li>
+          <li>
+            <a class="boxglow" href="https://www.youtube.com/@ensemble_iisc">YouTube</a>
+          </li>
       </div>
 
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
     </div>
 
   </div>

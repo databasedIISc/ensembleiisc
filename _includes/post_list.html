@@ -1,4 +1,4 @@
-<li class="item">
+<li class="item glow-card">
     <!-- <h4>
         <span class="post-list-date">{{ post.date | date: "%d %b %Y" }}</span><a href="{{ post.url }}">{{ post.title }}</a>
     </h4> -->
@@ -8,7 +8,7 @@
                 <img src="{{ post.image | default: '/assets/img/defaults/noposter.webp' }}" alt="{{ post.title }}" class="">
             </div>
             <div class="item-info">
-                <h4>{{ post.title }}</h4>
+                <h4 class="glow">{{ post.title }}</h4>
                 <div class="item-meta">
                     <datetime datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
                         {{ post.date | date: "%d %b %Y" | upcase }}
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div>
-            <a href="{{ post.url }}" class="btn btn-dark">
+            <a href="{{ post.url }}" class="boxglow">
                 <span class="material-symbols-outlined norm">arrow_forward</span> Read more
             </a>
         </div>
@@ -30,11 +30,11 @@
                 <img src="{{ address }}" alt="{{ topic }}" class="" onerror="this.onerror=null;this.src='/assets/img/defaults/notopic.webp';">
             </div>
             <div class="item-info">
-                <h4>{{ topic }}</h4>
+                <h4 class="glow">{{ topic }}</h4>
             </div>
         </div>
         <div>
-            <a href="/lectures/{{ topic | slugify }}/" class="btn btn-dark">
+            <a href="/lectures/{{ topic | slugify }}/" class="boxglow">
                 <span class="material-symbols-outlined norm">arrow_forward</span> See Lectures
             </a>
         </div>

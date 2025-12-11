@@ -1,151 +1,197 @@
-#intro-banner {
-    display: block;
-    width: 100%;
-    justify-items: center;
+section#intro {
+    height: 100svh;
+    position: relative;
+    animation: flicker 0.1s infinite;
+    align-content: center;
 
-    * {
-    height: 80svh;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+    .scanlines {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;
+    // background: repeating-linear-gradient(
+    //     to bottom,
+    //     transparent 0px,
+    //     transparent 2px,
+    //     rgba(123, 93, 41, 0.3) 3px,
+    //     rgba(121, 121, 121, 0.3) 4px
+    // );
+    // mix-blend-mode: lighten;
+    // pointer-events: none;
+    // z-index: 51;
+    mask: linear-gradient(to bottom, black, black 95%, transparent); // Ensure the image covers the area without distortion
+
+}
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    width: 100svw;
+    height: 100%;
+    z-index: -1;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: contrast(1.2) brightness(0.7) saturate(1.2) blur(2px);
+        mask: linear-gradient(to bottom, black, black 90%, transparent); // Ensure the image covers the area without distortion
     }
 }
 
-.intro-text {
-    --height: 4em;
-    position: relative; // Added for positioning pseudo-elements
-    justify-items: center;
-    background-color: var(--foreground);
-    background-image: url("/assets/img/home/speed.gif");
-    background-size: cover;
-    background-position: center;
-    color: var(--bg);
-    padding-block: calc(1.62 * var(--height)); // Adjusted to use the variable for height
+.hero-banner {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 
-    // Styles for the inner container holding the text
-    & > .container { // Assuming the direct child is .container based on HTML
-        max-width: 80%;
-        width: fit-content;
-        position: relative; // Added to ensure text is above pseudo-elements
-        z-index: 1;       // Added to ensure text is above pseudo-elements
-
-        .intro-title {
-            margin-top: 0;
+    @include media-query($on-palm) {
+        & {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            width: 90svw;
         }
     }
 
-    // Pseudo-elements for the outward curves
-    &::before, &::after {
-        content: '';
+
+    .hero-desc {
+
+        .hero-desc-keyword {
+            display: inline-block;
+            font-family: var(--funky-font);
+            font-weight: 800;
+            font-size: var(--size-2);
+            z-index: 2;
+            
+        }
+        
+        .hero-desc-text {
+            text-shadow: 
+                0 0 1px #fff,
+                0 0 2px var(--glow-mid);
+                /* Mix blend mode helps the text burn into the background */
+            mix-blend-mode: screen;
+            font-weight: 300;
+            text-align: left;
+        }
+    }
+
+    .hero-text {
+        height: auto;
+        // container-type: inline-size;
+        width: 100%;
+        position: relative;
+        text-align: left;
+        
+    }
+
+    .hero-title {
+        font-family: var(--funky-font);
+        line-height: 1;
+    }
+
+    .hero-subtitle {
+        font-family: var(--pixel-font);
+        text-shadow: 
+            0 0 1px #fff,
+            0 0 2px var(--glow-mid);
+            /* Mix blend mode helps the text burn into the background */
+        mix-blend-mode: screen;
+    }
+    }
+
+    .noise-overlay {
         position: absolute;
+        top: 0;
         left: 0;
         width: 100%;
-        height: calc(var(--height) + 10px); // Height of the curve, adjust as needed
-        background-color: var(--bg); // Match the intro-text background
+        height: 100%;
+        pointer-events: none;
+        z-index: 50;
+        opacity: 0.15;
+        filter: contrast(150%) brightness(100%);
     }
 
-    &::before { // Top outward curve
-        top: 0;
-        transform: translateY(calc(-100% + var(--height))); // Position above the main element
-        border-radius: 0 0 100% 100%;   // Create an upward curve on the bottom edge of this pseudo-element
-    }
+    .background-dust {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+        radial-gradient(rgba(255,255,255,.5), rgba(255,255,255,.1) 2px, transparent 3px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    opacity: 0.6;
+    z-index: 0;
+}
+    
 
-    &::after { // Bottom outward curve
-        bottom: 0;
-        transform: translateY(calc(100% - var(--height))); // Position below the main element
-        border-radius: 100% 100% 0 0;   // Create a downward curve on the top edge of this pseudo-element
-    }
+@keyframes flicker {
+    0% { opacity: 0.98; }
+    5% { opacity: 0.95; }
+    10% { opacity: 0.98; }
+    15% { opacity: 1; }
+    20% { opacity: 0.98; }
+    25% { opacity: 0.95; }
+    30% { opacity: 0.98; }
+    35% { opacity: 1; }
+    40% { opacity: 0.99; }
+    45% { opacity: 0.96; }
+    50% { opacity: 1; }
+    55% { opacity: 0.98; }
+    60% { opacity: 0.95; }
+    65% { opacity: 0.98; }
+    70% { opacity: 1; }
+    75% { opacity: 0.98; }
+    80% { opacity: 0.95; }
+    85% { opacity: 0.99; }
+    90% { opacity: 0.98; }
+    95% { opacity: 1; }
+    100% { opacity: 0.98; }
 }
 
 .section {
-    display: flex;
+    // display: flex;
     padding-block: 2em;
     width: 100svw;
 }
 
 .section-title {
-    --section-border: 2px solid var(--foreground);
-    margin: 0;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    min-height: 60svh;
-    position: relative;
-    // text-align: center;
-    border-left: var(--section-border);
-    // &::after {
-    //     content: '';
-    //     width: 2px;
-    //     height: 100%;
-    //     background-color: var(--foreground);
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    // }
-}
-
-.latests {
-    margin-left: 5vw;
-    width: 100%;
-
-    .options {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-.latest-items {
-    height: 60svh;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    flex-grow: 1;
-    
-
-
-    .latest {
-        display: flex;
-        height: 100%;
-        width: 100%;
-        gap: 1em;
-        flex-direction: row;
-
-        .latest-info {
-            width: 62%;
-            margin-top: 0;
-
-        }
-
-        .latest-banner {
-            margin-top: 0;
-            width: 38%;
-            img {
-                margin-top: 0;
-                width: 100%;
-                object-fit: contain;
-                aspect-ratio: 1/1;
-                object-position: center;
-            }
-        }
-        width: inherit;
-        flex-grow: 1;
-        datetime {
-            font-size: var(--size-1);
-        }
-    }
+    font-family: var(--funky-font);
+    // text-transform: uppercase;
+    font-size: var(--size-4);
+    display: inline-block;
 }
 
 #latest-open-day {
     .latest {
         width: 100%;
         overflow: hidden;
+        padding: 0;
 
         .latest-banner {
             width: 100%;
             img {
                 width: 100%;
+                height: 100%;
                 object-fit: cover;
                 object-position: top;
+            }
+        }
+
+        @include media-query($on-palm) {
+            .latest-banner {
+                display: block;
+                height: 100%;
             }
         }
     }
@@ -154,21 +200,6 @@
 @include media-query($on-palm) {
     .section {
         display: block;
-    }
-
-    .section-title {
-        writing-mode: horizontal-tb;
-        min-height: unset;
-        border-right: 0;
-        border-bottom: var(--section-border);
-    }
-
-    .latests {
-        margin: unset;
-
-        div {
-            margin-top: 1em !important;
-        }
     }
 
     .latest-items {

@@ -1,9 +1,11 @@
-.open-day {
+.image-board {
     columns: 350px;
     column-gap: 1em;
 
     img {
         margin-bottom: 1em;
+        width: 100%;
+        border-radius: var(--border-radius);
     }
 }
 

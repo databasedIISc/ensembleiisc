@@ -1,0 +1,1 @@
+document.querySelector(':root').style.setProperty('--nav-height', `${document.querySelector('nav').offsetHeight}px`);

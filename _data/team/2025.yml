@@ -2,20 +2,35 @@ year: 2025
 convenors:
   - name: "Ritabrata Ghosh"
     bio:
-    email: 
-    # picture: "/assets/img/team/2025/ritabrata.webp"
+    email: ritabratag@iisc.ac.in
+    picture: "/assets/img/team/2025/ritabrata.webp"
 
   - name: "Simar Narula"
     bio:
-    email: 
-    # picture: "/assets/img/team/2025/simar.webp"
+    email: simarnarula@iisc.ac.in
+    picture: "/assets/img/team/2025/simar.webp"
 
   - name: "Gunda Sai Vinay"
     bio:
-    email: 
-    # picture: "/assets/img/team/2025/vinay.webp"
+    email: saivinayg@iisc.ac.in
+    picture: "/assets/img/team/2025/vinay.webp"
 
 volunteers:
+  - name: "Aishik Nath"
+    role: Design and Dev Team Lead
+    email: aishiknath@iisc.ac.in
+
+  - name: "Aditya Thakkar"
+    role: Web Developer
+    email: adityaat@iisc.ac.in
+
+  - name: "Sameer Rajput"
+    role: Video Editor and Lecture Recording
+    email: sameerr@iisc.ac.in
+  
+  - name: "Vidhi Chauhan"
+    role: Design and "Keeping the website alive"
+    email: vidhic@iisc.ac.in
   # - name: "Volunteer 1"
   #   email: volunteer1@example.com
     # picture: 
