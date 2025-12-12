@@ -235,17 +235,23 @@ section#intro {
         }
     }
 
-    .newsletter-info {
-        width: 60%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
+    .newsletter-title {
         @include media-query($on-palm) {
-            width: 100%;
-            text-align: center;
+            margin: 0;
         }
     }
+
+    // .newsletter-info {
+    //     width: 60%;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+
+    //     @include media-query($on-palm) {
+    //         width: 100%;
+    //         text-align: center;
+    //     }
+    // }
 }
 
 @include media-query($on-palm) {
