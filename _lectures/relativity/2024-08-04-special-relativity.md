@@ -2,7 +2,6 @@
 title: Lecture on Special Relativity
 layout: post
 author: Indrayuth Das
-tags: [featured,]
 ---
 
 Lecture series on "General Relativity," designed to prepare students for advanced research.

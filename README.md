@@ -61,6 +61,29 @@ https://github.com/databasedIISc/ensembleiisc/blob/0487c79c9a659cac01c34607e56e4
 
 Adding new events is relatively simpler. Just add a markdown file named `yyyy-mm-dd-slugified-title.md` in the `_events` folder. Then follow step 5 onwards from [Adding New Lectures](#adding-new-lectures).
 
+## Marking Featured Posts
+
+To make any post in either Lectures or Events as featured, add a "featured" tag in the front matter.
+
+```markdown
+tags: [featured,]
+```
+
+
+## Adding new images in Gallery
+
+Upload your image in `/assets/img/gallery/` and name it as `YYYY-MM-DD_Your-image-description` followed by the extension (`.webp` recommended).
+
+## Adding new Newsletters
+
+It has been assumed that the newsletter names will continue as **The Canonical** and **The Geodesic**, hence folders of appropriate names have been added to `/assets/files/newsletter/` and `/assets/img/newsletter`. To add new issues of these Newsletters, add the newsletter PDF under appropriate folder in `/assets/files/newsletter/`. Rename the PDF in the format `YYYY-MM-DD_Your-Newsletter-Tagline.pdf` where `YYYY-MM-DD` is the newsletter publication date. Add the image for the cover page under appropriate folder in `/assets/img/newsletter/` and rename it as `YYYY-MM-DD` followed by image extension (`.webp` recommended) where `YYYY-MM-DD` is the publication date. If the dates mismatch, the cover page will not be linked to the PDF file.
+
+If you wish to add any other newsletter (say you manage to publish monthly newsletters) add them under `assets/files/newsletters/` with appropriate naming (in the format mentioned before) to make them appear under **Other Newsletter** section on the Newsletter page.
+
+## Adding new Team Members
+
+To add a new section for your year's Convenors and other members in the Team page, add a new file named as `YYYY.yml` under `_data/team/`. You can copy the format of the such files from the other files in that section. If the other members have a specific team name, you can add a `volunteer-team-name` field. A good example of such a file is `2025.yml`.
+
 ## Conclusion
 
 I hope this helped. In case you have any doubts, feel free to contact the repository admins.

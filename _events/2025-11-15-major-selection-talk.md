@@ -2,6 +2,7 @@
 title: O Captains! My Captains! Welcome to the Dead Physicists' Society
 layout: post
 author: Ritabrata Ghosh
+tags: [featured,]
 ---
 
 Major Selection Talk for Physics majors

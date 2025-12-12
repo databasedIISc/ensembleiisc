@@ -8,6 +8,11 @@
         flex-direction: column;
         gap: 2rem;
     }
+    .newsletter-info {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 
     .newsletter-images {
         width: 37%;
@@ -22,7 +27,7 @@
         }
 
         @include media-query($on-palm) {
-            height: 63%;
+            height: 37%;
             width: 100%;
         }
 

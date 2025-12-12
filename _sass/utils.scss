@@ -303,7 +303,7 @@
         inset 0 0 100px rgba(135, 99, 2, 0.475),  /* Inner shadow for depth */
         0 0 0 1px rgba(255, 174, 23, 0.591);  /* The specific "Rim Light" glow */
     border-radius: var(--border-radius, 1rem);
-    flex-direction: row;
+    // flex-direction: row;
     position: relative;
     filter: blur(0.5px);
     mix-blend-mode: screen;

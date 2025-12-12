@@ -2,6 +2,7 @@
 title: Takayanagi Coming to IISc!
 layout: post
 image: /assets/img/events/takayanagi/poster.webp
+tags: [featured,]
 ---
 
 The pioneer of Holographic Entanglement Entropy, Professor Tadashi Takayanagi from Yukawa Institute for Theoretical Physics, is coming to IISc

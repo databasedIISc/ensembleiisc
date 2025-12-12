@@ -22,8 +22,8 @@ order: 5
         {% assign canonical_date = file.name | split: '.' | first | split: '_' | first | date: "%b %Y" %}
         {% assign canonical_desc = file.name | split: '.' | first | split: '_' | last %}
       <div class="newsletter-info">
-          <h3 class="newsletter-title glow no-margin">Latest Issue</h3>
-          <p>{{ canonical_date }} | {{ canonical_desc | replace: '-', ' ' | escape }}</p>
+              <h3 class="newsletter-title glow no-margin">Latest Issue</h3>
+              <p>{{ canonical_date }} | {{ canonical_desc | replace: '-', ' ' | escape }}</p>
           <div class="read-more">
             <a href="{{ file.path | relative_url }}" class="boxglow" target="_blank" rel="noopener"><span class="material-symbols-outlined norm">arrow_forward</span> Read more</a>
           </div>

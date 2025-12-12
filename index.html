@@ -125,7 +125,7 @@ order: 1
     {% assign filtered_posts = unsorted_posts | where_exp: "post", "post.layout != 'topic-page'" %}
     {% assign featured_posts = filtered_posts | where_exp: "post", "post.tags contains 'featured'" %}
     {% assign posts = featured_posts | sort: 'date' | reverse %}
-    {% for post in posts limit:6 %}
+    {% for post in posts %}
     <li class="latest glow-card">
       <div class="latest-info">
         <datetime datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -191,7 +191,7 @@ order: 1
       <button class="next btn btn-dark glow"><span class="material-symbols-outlined large">arrow_forward</span></button>
     </div>
     <div class="extra-links">
-      <a href="{{ site.baseurl }}/open-day-2025" class="btn btn-dark glow"><span class="material-symbols-outlined">arrow_forward</span> All Posters</a>
+      <a href="{{ site.baseurl }}/open-day-2025" class="btn btn-dark glow"><span class="material-symbols-outlined">arrow_forward</span> Open Day 2025</a>
     </div>
   </div>
   </div>
