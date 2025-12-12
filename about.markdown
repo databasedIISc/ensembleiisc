@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-order: 5
+order: 6
 ---
 
 Ensemble is the student-run Undergraduate Physics Club of the Indian Institute of Science, Bangalore. We are a group of inquisitive individuals - driven towards grasping a tiny sliver of all there is - and welcome anyone with a slight tinge of mania for knowledge.

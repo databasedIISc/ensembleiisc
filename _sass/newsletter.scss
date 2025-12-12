@@ -1,0 +1,43 @@
+.newsletter-section {
+    padding: var(--padding);
+    display: flex;
+    gap: 2rem;
+    height: 60svh;
+
+    @include media-query($on-palm) {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .newsletter-images {
+        width: 37%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: var(--border-radius);
+        }
+
+        @include media-query($on-palm) {
+            height: 63%;
+            width: 100%;
+        }
+
+    }
+}
+
+.newsletter-archive {
+    margin-top: 1rem;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+}

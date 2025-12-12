@@ -197,6 +197,57 @@ section#intro {
     }
 }
 
+.newsletter-all-link {
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.newsletter-box {
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+
+    @include media-query($on-palm) {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    & > div {
+        width: calc(50% - 1rem);
+        padding: var(--padding);
+
+        @include media-query($on-palm) {
+            width: 100%;
+        }
+    }
+
+    .newsletter-image {
+        width: 100%;
+
+        @include media-query($on-palm) {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .newsletter-info {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include media-query($on-palm) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
 @include media-query($on-palm) {
     .section {
         display: block;

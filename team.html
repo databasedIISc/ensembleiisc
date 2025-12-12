@@ -30,7 +30,7 @@ picture: /assets/img/open_day/gallery/team.webp
 </ul>
 {%- if obj.volunteers -%}
 <div class="team-title volunteers">    
-    <h3>Volunteers</h3>
+    <h3>{{ obj.volunteer-team-name | default: "Volunteers" }}</h3>
     <hr>
 </div>
 <ul class="member-list item-list">
@@ -40,9 +40,12 @@ picture: /assets/img/open_day/gallery/team.webp
         <div class="person-image item-image">
             <img src="{{ person.picture | default: '/assets/img/defaults/noprofile.webp' }}" alt="{{ person.name }}" class="">
         </div>
-        {% endif %}
         <div class="person-info">
             <h4 class="glow">{{ person.name }}</h4>
+        {% else %}
+        <div class="person-info">
+            <h4 class="glow no-margin">{{ person.name }}</h4>
+        {% endif %}
             {% if person.role %}<p>{{ person.role }}</p>{%- endif -%}
             <a class="email" href="mailto:{{ person.email }}">{{ person.email }}</a>
         </div>

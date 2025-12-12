@@ -24,13 +24,13 @@
         </div>
     {% elsif topic %}
             <div>
-            <div class="item-image">
+            <!-- <div class="item-image">
                 {% assign slug = topic | slugify %}
                 {% assign address = '/assets/img/lectures/' | append: slug | append: '.webp' %}
                 <img src="{{ address }}" alt="{{ topic }}" class="" onerror="this.onerror=null;this.src='/assets/img/defaults/notopic.webp';">
-            </div>
+            </div> -->
             <div class="item-info">
-                <h4 class="glow">{{ topic }}</h4>
+                <h4 class="glow no-margin">{{ topic }}</h4>
             </div>
         </div>
         <div>

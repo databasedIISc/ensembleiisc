@@ -1,0 +1,19 @@
+---
+layout: page
+title: Gallery
+permalink: /gallery/
+order: 8
+---
+
+<div class="gallery">
+    {% assign gallery_images = site.static_files | where_exp: "file", "file.path contains '/assets/img/gallery/'" | sort: 'name' %}
+    {% for image in gallery_images %}
+    {% assign image_desc = image.name | split: '.' | first | split: '_' | last %}
+        <div class="gallery-item">
+            <img id="{{ image_desc }}" src="{{ image.path | relative_url }}" alt="{{ image_desc | replace: '-', ' ' | escape }}" class="gallery-image">
+        <p class="container">
+            {{ image_desc | replace: '-', ' ' | escape }}
+        </p>
+        </div>
+    {% endfor %}
+</div>

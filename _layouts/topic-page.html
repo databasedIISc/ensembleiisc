@@ -3,10 +3,11 @@ layout: default
 ---
 
 <div class="container">
-  <a class="boxglow nav-height-adjust" href="{{ site.baseurl }}/lectures/"><span class="material-symbols-outlined norm">arrow_back</span> All Lectures</a>
+  <a class="boxglow nav-height-adjust" href="{{ site.baseurl }}/lectures/"><span class="material-symbols-outlined norm">arrow_back</span> All Topics</a>
   <h1 class="pagetitle">{{ page.topic }}</h1>
-  
-    {{  content }}
+    <div class="markdown-body"> 
+      {{  content }}
+    </div>
       <ul class="item-list">
         {% assign filtered_lectures = site.lectures | where: "topic", page.topic %}
         {% for post in filtered_lectures %}

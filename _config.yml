@@ -122,4 +122,9 @@ defaults:
       type: lectures
     values:
       topic: "Other Topics"
+  - scope:
+      path: "_lectures/hep-group"
+      type: lectures
+    values:
+      topic: "HEP Group"
 

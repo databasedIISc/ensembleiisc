@@ -58,10 +58,10 @@ order: 1
           {{ post.date | date: "%d %b %Y" | upcase }}
         </datetime>
         <h3 class="latest-title glow">
-          {{ post.title | escape }}
+          {{ post.title | strip_html | truncate: 60, '...' | escape }}
         </h3>
         <p>
-          {{ post.excerpt | strip_html | truncate: 150, '...' }}
+          {{ post.excerpt | strip_html | truncate: 150, '...' | escape }}
         </p>
         <div class="read-more">
           <a href="{{ post.url }}" class="boxglow"><span class="material-symbols-outlined norm">arrow_forward</span> Read more</a>
@@ -132,10 +132,10 @@ order: 1
           {{ post.date | date: "%d %b %Y" | upcase }}
         </datetime>
         <h3 class="glow">
-          {{ post.title | escape }}
+          {{ post.title | strip_html | truncate: 60, '...' | escape }}
         </h3>
         <p>
-          {{ post.excerpt | strip_html | truncate: 150, '...' }}
+          {{ post.excerpt | strip_html | truncate: 150, '...' | escape }}
         </p>
         <div class="read-more">
           <a href="{{ post.url }}" class="boxglow"><span class="material-symbols-outlined norm">arrow_forward</span> Read more</a>
@@ -199,31 +199,54 @@ order: 1
 </div>
 </section>
 
-<section id="canonical">
+<section id="newsletter">
 <div class="section container">
 
-<h2 class="section-title">The Canonical</h2>
-<div class="latests swiper">
-  <ul class="latest-items swiper-items" id="latest-posts">
-    <li class="latest">
-      <div class="latest-info">
-        <h3>
-          The Canonical
-        </h3>
-        <p>
-          The Inter IISER-IISc Physics Magazine.
-        </p>
-        <div class="">
-          <a href="/assets/files/TheCanonical (1).pdf" class="btn btn-dark"><span class="material-symbols-outlined norm">arrow_forward</span>Read</a>
-        </div>
+<h2 class="section-title">Newsletter</h2>
+  <div class="newsletter-box">
+    {% assign canonical_img = site.static_files | where_exp: "file", "file.path contains '/assets/img/newsletter/canonical/'" | sort: 'name' | reverse %}
+    {% assign canonical_file = site.static_files | where_exp: "file", "file.path contains '/assets/files/newsletter/canonical/'" | sort: 'name' | reverse %}
+    {% assign geodesic_img = site.static_files | where_exp: "file", "file.path contains '/assets/img/newsletter/geodesic/'" | sort: 'name' | reverse %}
+    {% assign geodesic_file = site.static_files | where_exp: "file", "file.path contains '/assets/files/newsletter/geodesic/'" | sort: 'name' | reverse %}
+    <div id="canonical" class="canonical glow-card">
+      <div class="newsletter-image">
+        {% for img in canonical_img limit:1 %}
+        <img src="{{ img.path | relative_url }}" alt="The Canonical Newsletter Cover" class="post-img">
+        {% endfor %}
       </div>
-      <div class="latest-banner">
-        <img src="/assets/files/The_Canonical_front_page.png" alt="The Canonical" class="post-img">
+      {% for file in canonical_file limit:1 %}
+        {% assign canonical_date = file.name | split: '.' | first | split: '_' | first | date: "%b %Y" %}
+      <h3 class="newsletter-title glow">The Canonical</h3>
+      <p><datetime datetime="{{ canonical_date | date: '%Y-%m-%d' }}" itemprop="datePublished">
+        {{ canonical_date }}
+      </datetime> | {{ file.name | split: '.' | first | split: '_' | last | replace: '-', ' ' | escape }}</p>
+      <div class="read-more">
+        <a href="{{ file.path | relative_url }}" class="boxglow" target="_blank" rel="noopener"><span class="material-symbols-outlined norm">arrow_forward</span> Read more</a>
+      {% endfor %}
       </div>
-    </li>
-  </ul>
+      </div>
+    <div id="geodesic" class="geodesic glow-card">
+      <div class="newsletter-image">
+        {% for img in geodesic_img limit:1 %}
+        <img src="{{ img.path | relative_url }}" alt="The Geodesic Newsletter Cover" class="post-img">
+        {% endfor %}
+      </div>
+      {% for file in geodesic_file limit:1 %}
+        {% assign geodesic_date = file.name | split: '.' | first | split: '_' | first | date: "%b %Y" %}
+      <h3 class="newsletter-title glow">The Geodesic</h3>
+      <p><datetime datetime="{{ geodesic_date | date: '%Y-%m-%d' }}" itemprop="datePublished">
+        {{ geodesic_date }}
+      </datetime> | {{ file.name | split: '.' | first | split: '_' | last | replace: '-', ' ' | escape }}</p>
+      <div class="read-more">
+        <a href="{{ file.path | relative_url }}" class="boxglow" target="_blank" rel="noopener"><span class="material-symbols-outlined norm">arrow_forward</span> Read more</a>
+      {% endfor %}
+      </div>
+      </div>
+    </div>
+    <a href="{{ site.baseurl }}/newsletter" class="btn btn-dark glow newsletter-all-link">
+      <span class="material-symbols-outlined">arrow_forward</span> All Newsletters
+    </a>
   </div>
-</div>
 </div>
 
 </section>

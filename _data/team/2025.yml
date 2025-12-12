@@ -15,7 +15,10 @@ convenors:
     email: saivinayg@iisc.ac.in
     picture: "/assets/img/team/2025/vinay.webp"
 
+volunteer-team-name: "Design and Development Team"
+
 volunteers:
+
   - name: "Aishik Nath"
     role: Design and Dev Team Lead
     email: aishiknath@iisc.ac.in

@@ -45,6 +45,7 @@
 body {
   background-color: var(--bg);
   color: var(--foreground);
+  font-family: var(--sans-font);
 }
 
 nav.navbar {
@@ -181,6 +182,9 @@ hr {
 }
 
 
+.read-more {
+  margin-top: 2rem;
+}
 
 // Utitlity
 
@@ -199,6 +203,10 @@ hr {
   &.large {
     font-size: 1.6em;
   }
+}
+
+.no-margin {
+  margin: 0;
 }
 
 
@@ -281,6 +289,9 @@ footer {
 
     .footer-right {
       padding: var(--padding);
+      @include media-query($on-palm) {
+        padding: 1rem;
+      }
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -297,8 +308,11 @@ footer {
   }
 }
 
+@import "markdown.scss";
 @import "index";
 @import "team";
 @import "open-day";
 @import "post";
+@import "newsletter";
+@import "gallery";
 @import "utils";
