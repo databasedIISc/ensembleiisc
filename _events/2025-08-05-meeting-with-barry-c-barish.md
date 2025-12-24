@@ -3,7 +3,6 @@ title: Online Meeting with Prof. Barry C. Barish
 layout: post
 author: Prof. Barry C. Barish
 image: /assets/img/events/meeting-with-barry-c-barish/poster.webp
-tags: [featured,]
 ---
 
 Notification regarding online meeting with Prof. Barry C. Barish

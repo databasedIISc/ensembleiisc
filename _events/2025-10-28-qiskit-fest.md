@@ -3,7 +3,7 @@ title: IBM Quantum Fall Fest 2025 at IISc
 layout: post
 author: Simar Narula
 image: /assets/img/events/qiskit-fest/poster.webp
-
+tags: [featured,]
 ---
 
 Announcement for IISc x Quantum Fall Fest

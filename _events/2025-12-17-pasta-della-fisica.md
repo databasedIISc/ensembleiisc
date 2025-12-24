@@ -3,7 +3,6 @@ title: Phase behavior of Cacio e Pepe sauce
 layout: post
 author: Ivan Di Terlizzi, Max Planck Institute for the Physics of Complex Systems (MPI-PKS)
 image: /assets/img/events/pasta-sauce/poster.webp
-tags: [featured,]
 ---
 
 Announcement for talk 
