@@ -118,6 +118,11 @@ defaults:
     values:
       topic: "Quantum Mechanics"
   - scope:
+      path: "_lectures/quantum-error-correction"
+      type: lectures
+    values:
+      topic: "Quantum Error Correction"
+  - scope:
       path: "_lectures/other-topics"
       type: lectures
     values:
@@ -127,4 +132,6 @@ defaults:
       type: lectures
     values:
       topic: "HEP Group"
+
+
 
