@@ -123,6 +123,11 @@ defaults:
     values:
       topic: "Quantum Error Correction"
   - scope:
+      path: "_lectures/cosmology"
+      type: lectures
+    values:
+      topic: "Cosmology"
+  - scope:
       path: "_lectures/other-topics"
       type: lectures
     values:
