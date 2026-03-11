@@ -176,7 +176,7 @@ order: 1
 <h2 class="section-title">Open Day</h2>
 <div class="latests swiper">
   <ul class="latest-items swiper-items mb-3" id="latest-open-day">
-{% assign all_posters = site.static_files | where_exp: "file", "file.path contains '/assets/img/open_day/posters/'" %}
+{% assign all_posters = site.static_files | where_exp: "file", "file.path contains '/assets/img/open_day/2026/posters/'" %}
 {% for poster in all_posters %}
     <li class="latest glow-card">
       <div class="latest-banner">
@@ -191,7 +191,7 @@ order: 1
       <button class="next btn btn-dark glow"><span class="material-symbols-outlined large">arrow_forward</span></button>
     </div>
     <div class="extra-links">
-      <a href="{{ site.baseurl }}/open-day-2025" class="btn btn-dark glow"><span class="material-symbols-outlined">arrow_forward</span> Open Day 2025</a>
+      <a href="{{ site.baseurl }}/open-day-2026" class="btn btn-dark glow"><span class="material-symbols-outlined">arrow_forward</span> Open Day 2026</a>
     </div>
   </div>
   </div>
