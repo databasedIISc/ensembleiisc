@@ -70,6 +70,8 @@ collections:
   events:
     output: true
     # permalink: /events/:title/
+  open_day:
+    output: true
 
 defaults:
   - scope:

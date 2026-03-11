@@ -1,0 +1,43 @@
+year: 2026
+convenors:
+  - name: "Avik Das"
+    bio:
+    email: avikdas@iisc.ac.in
+    picture: "/assets/img/team/2026/avik.webp"
+
+  - name: "Sameer Rajput"
+    bio:
+    email: sameerr@iisc.ac.in
+    picture: "/assets/img/team/2026/sameer.webp"
+
+  - name: "Vidhi Chauhan"
+    bio:
+    email: vidhic@iisc.ac.in
+    picture: "/assets/img/team/2026/vidhi.webp"
+
+  - name: "Vinay Kaushik"
+    bio:
+    email: vinaykaushik@iisc.ac.in
+    picture: "/assets/img/team/2026/vinay.webp"
+
+volunteer-team-name: "Core Team"
+
+volunteers:
+
+  - name: "Dhritishman Dutta"
+    email: dhritishmand@iisc.ac.in
+    picture: "/assets/img/team/2026/dutta.webp"
+
+  - name: "Kaustav Prakash Sarma"
+    email: kaustavs@iisc.ac.in
+    picture: "/assets/img/team/2026/kausty.webp"
+
+  - name: "Ritabrata Saha"
+    email: ritabratas@iisc.ac.in
+    picture: "/assets/img/team/2026/rito.webp"
+
+
+
+  # - name: "Volunteer 1"
+  #   email: volunteer1@example.com
+    # picture: 

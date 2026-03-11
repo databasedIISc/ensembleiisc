@@ -11,5 +11,6 @@ title: HEP Group
 | Introduction to QCD: Non abelian gauge lagrangian, namely Yang Mills Path integrals, and a brief introduction to the Fadeev Popov method | Abhishek Kundu | [Notes](https://indianinstituteofscience-my.sharepoint.com/:b:/g/personal/vidhic_iisc_ac_in/IQACecYve2-sSYED4fuT6k-0AYuABX1JN3GAtqCNHONAsqA?e=BIVKDY) |
 | Chern Simons | Aman Goyal | [Notes](https://indianinstituteofscience-my.sharepoint.com/:b:/g/personal/vidhic_iisc_ac_in/IQDixQGdJuuzTLS-wvVELtGWAfQb8DVN3gKHMaazqPtqILc?e=jLYL5i) |
 | Causal Set Theory | Nikshay Chugh |  |
+| Partition functions in quantum gravity (in curved spaces) | Aditya Panikkar | |
 
 

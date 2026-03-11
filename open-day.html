@@ -1,0 +1,24 @@
+---
+layout: page
+title: Open Day
+permalink: /open-day/
+order: 4
+---
+
+    <p>Spring has set in, college midsemester exams are over, and National Science Day just passed by. The Indian Institute of Science has opened its doors for science enthusiasts, amateurs and skeptics, children and adults alike. Welcome to the haven of curiosity and wonder!
+<br>
+IISc hosts its Open Day every year, allowing the public to roam the campus, exploring experiments, concepts, quizzes, games and competitions. The exhibitions are set up by students and faculty members, who interact with and explain to the inquisitive minds eager to listen.
+<br>
+On this occasion, the UG Physics Club presents its own platter of relishing exhibitions and experiments. From levitating superconductors in liquid nitrogen, to hypnotizing patterns made out of falling sand, from detecting muons using alcohol, to bright fringes produced by electron beams. The Ensemble Open Day exhibitions are a huge success among the public, and hopefully leaves the guests in awe of the wonders Physics has to offer.
+<br>
+The list of the experiments performed each year is given, followed by the pictures of our volunteers and conveners in action!</p>
+
+{% assign years = site.open_day | sort:"year" | reverse %}
+{% for page in years %}
+  <li class="open-day-item">
+      <a href="{{ page.url }}">
+          <img src="{{ page.image }}" alt="{{ page.year }}">
+          <p>{{ page.year }}</p>
+      </a>
+  </li>
+{% endfor %}
