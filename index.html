@@ -9,11 +9,11 @@ order: 1
 ---
 
 <section id="intro">
-  <div class="scanlines"></div>
+  <!-- <div class="scanlines"></div> -->
 
-  <div class="hero-image">
+  <!-- <div class="hero-image">
     <img src="{{ '/assets/img/home/blackhole.webp' | relative_url }}" alt="Ensemble Logo" class="logo">
-  </div>
+  </div> -->
   <div class="container hero-banner">
     <div class="hero-text">
       <svg style="display: none;">
@@ -28,7 +28,7 @@ order: 1
         <div class="background-dust"></div>
         <div class="noise-overlay" style="filter: url(#noiseFilter) opacity(0.3);"></div>
 
-      <h1 class="hero-title glow">
+      <h1 class="hero-title">
         {% include logo_svg.html %}
     </h1>
       <!-- <h3 class="hero-subtitle">The Undergraduate Physics Club of IISc</h3> -->
@@ -68,7 +68,7 @@ order: 1
         </div>
       </div>
       <div class="latest-banner">
-        <img src="{{ post.image | default: '/assets/img/defaults/noposter.webp' }}" alt="{{ post.title }}" class="post-img">
+        <img src="{{ post.image | default: '/assets/img/defaults/noposter.webp' }}" loading="lazy" alt="{{ post.title }}" class="post-img">
       </div>
     </li>
     {% endfor %}
@@ -142,7 +142,7 @@ order: 1
         </div>
       </div>
       <div class="latest-banner">
-        <img src="{{ post.image | default: '/assets/img/defaults/noposter.webp' }}" alt="{{ post.title }}" class="post-img">
+        <img src="{{ post.image | default: '/assets/img/defaults/noposter.webp' }}" loading="lazy" alt="{{ post.title }}" class="post-img">
       </div>
     </li>
     {% endfor %}
@@ -180,7 +180,7 @@ order: 1
 {% for poster in all_posters %}
     <li class="latest glow-card">
       <div class="latest-banner">
-        <img src="{{ poster.path | relative_url }}" alt="{{ poster.name }}" class="post-img">
+        <img src="{{ poster.path | relative_url }}" loading="lazy" alt="{{ poster.name }}" class="post-img">
       </div>
     </li>
 {% endfor %}
@@ -211,7 +211,7 @@ order: 1
     <div id="canonical" class="canonical glow-card">
       <div class="newsletter-image">
         {% for img in canonical_img limit:1 %}
-        <img src="{{ img.path | relative_url }}" alt="The Canonical Newsletter Cover" class="post-img">
+        <img src="{{ img.path | relative_url }}" loading="lazy" alt="The Canonical Newsletter Cover" class="post-img">
         {% endfor %}
       </div>
       {% for file in canonical_file limit:1 %}
@@ -228,7 +228,7 @@ order: 1
     <div id="geodesic" class="geodesic glow-card">
       <div class="newsletter-image">
         {% for img in geodesic_img limit:1 %}
-        <img src="{{ img.path | relative_url }}" alt="The Geodesic Newsletter Cover" class="post-img">
+        <img src="{{ img.path | relative_url }}" loading="lazy" alt="The Geodesic Newsletter Cover" class="post-img">
         {% endfor %}
       </div>
       {% for file in geodesic_file limit:1 %}

@@ -11,7 +11,7 @@ order: 8
     {% assign image_date = image.name | split: '.' | first | split: '_' | first %}
     {% assign image_desc = image.name | split: '.' | first | split: '_' | last %}
         <div class="gallery-item">
-            <img id="{{ image_desc }}" src="{{ image.path | relative_url }}" alt="{{ image_desc | replace: '-', ' ' | escape }}" class="gallery-image">
+            <img id="{{ image_desc }}" src="{{ image.path | relative_url }}" loading="lazy" alt="{{ image_desc | replace: '-', ' ' | escape }}" class="gallery-image">
         <p class="container">
             {% if image_date != image_desc %}
                 <datetime datetime="{{ image_date }}">{{ image_date | date: "%d %b %Y" }}</datetime> | 

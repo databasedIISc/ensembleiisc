@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bytesized&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Staatliches&display=swap');
+// Fonts are imported from default.html
 
+html {
+  interpolate-size: allow-keywords; 
+}
 
 :root {
   --size--2: clamp(0.5628rem, 0.7402rem + -0.229vw, 0.6944rem);
@@ -135,6 +138,14 @@ nav.navbar {
 
 }
 
+.nav-height-adjust {
+    margin-top: var(--nav-height, 4rem);
+}
+
+a.nav-height-adjust {
+    display: inline-block;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--sans-font);
   font-weight: 700 !important;
@@ -215,12 +226,64 @@ hr {
   margin: 0;
 }
 
+// Settings
 
+#settings {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    border: var(--border-weight) solid var(--gradient-border);
+    border-radius: var(--border-radius);
+    z-index: 100;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    #settings-content {
+        box-sizing: border-box;
+        font-size: 0.9rem;
+        overflow: hidden;
+        max-height: 100svh;
+        transition: max-height 0.3s ease-out;
+        
+        &.closed {
+          max-height: 0;
+          transition: max-height 0.3s ease-out;
+        }
+    }
+
+    #settings-header {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+
+        #settings-toggle {
+            background: none;
+            border: none;
+            color: hsl(from var(--foreground) h s l / 0.5);
+            cursor: pointer;
+            transition-duration: 0.5s ease-out;
+
+            &:hover {
+                transition: 0.3s ease-out;
+                color: hsl(from var(--foreground) h s l / 0.8);
+            }
+
+            &:focus {
+                outline: transparent;
+                box-shadow: none;
+            }
+        }
+    }
+
+
+}
 
 // Picture header
 
 .page-has-picture {
-    --mask: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+  --mask1: radial-gradient(at 100% 0%, rgba(0,0,0,1), rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+  --mask2: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
     height: 80svh;
     align-content: end;
     position: relative;
@@ -233,9 +296,9 @@ hr {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      filter: brightness(0.7) contrast;
-      z-index: -1;
-      mask-image: var(--mask);
+      // filter: brightness(0.7) contrast;
+      // z-index: -1;
+      mask-image: var(--mask2)
     }
 
 

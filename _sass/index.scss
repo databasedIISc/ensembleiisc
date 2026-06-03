@@ -1,9 +1,12 @@
 section#intro {
     height: 100svh;
     position: relative;
-    animation: flicker 0.1s infinite;
     align-content: center;
+    
+}
 
+body.quality-mode section#intro {
+    animation: flicker 0.1s infinite;
     .scanlines {
     // position: absolute;
     // top: 0;
@@ -22,7 +25,7 @@ section#intro {
     // z-index: 51;
     mask: linear-gradient(to bottom, black, black 95%, transparent); // Ensure the image covers the area without distortion
 
-}
+}   
 }
 
 .hero-image {
@@ -72,6 +75,13 @@ section#intro {
         }
         
         .hero-desc-text {
+            body.glow-enabled & {
+                text-shadow: 
+                    0 0 1px #fff,
+                    0 0 2px var(--glow-mid);
+                    /* Mix blend mode helps the text burn into the background */
+                mix-blend-mode: screen;
+            }
             text-shadow: 
                 0 0 1px #fff,
                 0 0 2px var(--glow-mid);

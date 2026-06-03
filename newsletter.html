@@ -15,7 +15,7 @@ order: 5
 <div class="newsletter-section glow-card">
     <div class="newsletter-images">
         {% for img in canonical_img limit:1 %}
-        <img src="{{ img.path | relative_url }}" alt="The Canonical Newsletter Cover" class="post-img">
+        <img src="{{ img.path | relative_url }}" loading="lazy" alt="The Canonical Newsletter Cover" class="post-img">
         {% endfor %}
       </div>
       {% for file in canonical_file limit:1 %}
@@ -48,7 +48,7 @@ order: 5
 <div class="newsletter-section glow-card">
     <div class="newsletter-images">
         {% for img in geodesic_img limit:1 %}
-        <img src="{{ img.path | relative_url }}" alt="The Geodesic Newsletter Cover" class="post-img">
+        <img src="{{ img.path | relative_url }}" loading="lazy" alt="The Geodesic Newsletter Cover" class="post-img">
         {% endfor %}
       </div>
       {% for file in geodesic_file limit:1 %}

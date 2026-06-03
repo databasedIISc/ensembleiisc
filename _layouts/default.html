@@ -4,9 +4,44 @@
   {%- include head.html -%}
 
   <body>
+    <div id="loader-wrapper">
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+    <script>
+        const progressBar = document.querySelector('#progress-bar');
+        const loader = document.querySelector('#loader-wrapper');
+        let count = 0;
+        let percentage = 0;
+
+        window.updateLoader = async function() {
+            count++;
+            if (count <= 5) {
+                percentage += 20;
+            }
+
+            progressBar.style.width = percentage + '%';
+
+            if (percentage >= 100) {
+              document.querySelector('#page-contents-all').style.display = 'block';
+              progressBar.style.opacity = '0';
+              loader.style.opacity = '0';
+              setTimeout(() => {
+                  loader.style.display = 'none';
+                }, 500);
+            }
+        };
+        window.updateLoader();
+    </script>
+
+    {%- include scripts.html -%}
 
     {%- include header.html -%}
-
+    <script>
+      window.updateLoader();
+    </script>
+    <div id="page-contents-all"  style="display: none;">
     <main aria-label="Content">
       <!-- <div class="wrapper"> -->
         {{ content }}
@@ -14,7 +49,22 @@
     </main>
 
     {%- include footer.html -%}
-    {%- include scripts.html -%}
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+            window.updateLoader();
+        });
+
+        if (document.fonts) {
+            document.fonts.ready.then(function() {
+                window.updateLoader();
+            });
+        }
+
+        window.addEventListener('load', function() {
+            window.updateLoader();
+        });
+    </script>
   </body>
 
 </html>

@@ -3,7 +3,7 @@ layout: page
 title: Team
 permalink: /team/
 order: 2
-picture: /assets/img/open_day/2025/gallery/team.webp
+picture: /assets/img/open_day/2026/gallery/team.webp
 ---
 {% for object in site.data.team reversed %}
 {% assign obj = object[1] %}
@@ -16,7 +16,7 @@ picture: /assets/img/open_day/2025/gallery/team.webp
     {% for person in obj.convenors %}
     <li class="convenor item glow-card">
         <div class="person-image item-image">
-            <img src="{{ person.picture | default: '/assets/img/defaults/noprofile.webp' }}" alt="{{ person.name }}" class="">
+            <img src="{{ person.picture | default: '/assets/img/defaults/noprofile.webp' }}" loading="lazy" alt="{{ person.name }}" class="">
         </div>
         <div class="person-info">
             <div>
@@ -38,7 +38,7 @@ picture: /assets/img/open_day/2025/gallery/team.webp
     <li class="item glow-card">
         {% if person.picture %}
         <div class="person-image item-image">
-            <img src="{{ person.picture | default: '/assets/img/defaults/noprofile.webp' }}" alt="{{ person.name }}" class="">
+            <img src="{{ person.picture | default: '/assets/img/defaults/noprofile.webp' }}" loading="lazy" alt="{{ person.name }}" class="">
         </div>
         <div class="person-info">
             <h4 class="glow">{{ person.name }}</h4>

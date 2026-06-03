@@ -1,6 +1,39 @@
 // * Posts
 
 :root {
+    --gradient-border-shadow: 0 0 20px rgba(0, 0, 0, 0.5),        /* Outer shadow for lift */
+        inset 0 0 100px rgba(135, 99, 2, 0.475),  /* Inner shadow for depth */
+        0 0 0 1px rgba(255, 174, 23, 0.591);  /* The specific "Rim Light" glow */
+    --gradient-border: rgba(255, 255, 255, 0.5),
+    rgba(var(--glow-mid), 0.3),
+    rgba(var(--glow-outer), 0.3),
+    transparent,
+    rgba(var(--glow-outer), 0.3),
+    rgba(var(--glow-mid), 0.3),
+    rgba(255, 255, 255, 0.3);
+    --soft-glow:
+        0 0 1px #fff,
+        0 0 3px var(--glow-mid),
+        0 0 6px var(--glow-outer);
+
+    --strong-glow: 0 0 5px #fff,
+        0 0 3px #fff,
+        0 0 7px var(--glow-mid),
+        0 0 15px var(--glow-mid),
+        0 0 20px var(--glow-outer),
+        0 0 30px var(--glow-outer);
+
+    --stronger-glow: 0 0 10px #fff,
+        0 0 5px #fff,
+        0 0 10px var(--glow-mid),
+        0 0 18px var(--glow-mid),
+        0 0 25px var(--glow-outer),
+        0 0 40px var(--glow-outer);
+
+    --blur-amount: 10px;
+}
+
+body.glow-enabled {
     --gradient-border: rgba(255, 255, 255, 0.5),
     rgba(var(--glow-mid), 0.5),
     rgba(var(--glow-outer), 0.5),
@@ -8,7 +41,7 @@
     rgba(var(--glow-outer), 0.5),
     rgba(var(--glow-mid), 0.5),
     rgba(255, 255, 255, 0.5);
-    --soft-glow:
+        --soft-glow:
         0 0 2px #fff,
         0 0 5px var(--glow-mid),
         0 0 10px var(--glow-outer);
@@ -26,6 +59,16 @@
         0 0 60px var(--glow-mid),
         0 0 80px var(--glow-outer),
         0 0 100px var(--glow-outer);
+
+    .svgglow {
+
+        filter: 
+            drop-shadow(0 0 2px #fff)
+            drop-shadow(0 0 5px #fff)
+            drop-shadow(0 0 10px var(--glow-mid))
+            drop-shadow(0 0 20px var(--glow-mid))
+            drop-shadow(0 0 40px var(--glow-outer));
+    }
 }
 
 // Swiper
@@ -298,10 +341,7 @@
     // border: .5px solid transparent;
     // background: linear-gradient(var(--bg) 0 0) padding-box,
                 // conic-gradient(from -45deg, var(--gradient-border)) border-box;
-    box-shadow: 
-        0 0 20px rgba(0, 0, 0, 0.5),        /* Outer shadow for lift */
-        inset 0 0 100px rgba(135, 99, 2, 0.475),  /* Inner shadow for depth */
-        0 0 0 1px rgba(255, 174, 23, 0.591);  /* The specific "Rim Light" glow */
+    box-shadow: var(--gradient-border-shadow);
     border-radius: var(--border-radius, 1rem);
     // flex-direction: row;
     position: relative;
@@ -361,12 +401,10 @@ a.nav-height-adjust {
     
     /* SVGs ignore 'text-shadow'. We use 'drop-shadow' instead. */
     filter: 
+        drop-shadow(0 0 2px #fff)
         drop-shadow(0 0 5px #fff)
-        drop-shadow(0 0 10px #fff)
-        drop-shadow(0 0 20px var(--glow-mid))
-        drop-shadow(0 0 30px var(--glow-mid))
-        /* Reduced layers slightly for performance, as drop-shadow is heavy */
-        drop-shadow(0 0 40px var(--glow-outer));
+        drop-shadow(0 0 10px var(--glow-mid))
+        drop-shadow(0 0 20px var(--glow-outer))
 }
 
 .hr-glow {
@@ -377,4 +415,10 @@ a.nav-height-adjust {
     border-radius: 0 200% 200% 0;
     box-shadow: var(--strong-glow);
     opacity: 1;
+}
+
+.bg-blur {
+    background: hsla(from var(--bg) h s l a / 0.5);
+    backdrop-filter: blur(var(--blur-amount));
+    mix-blend-mode: normal !important;
 }

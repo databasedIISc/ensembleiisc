@@ -17,7 +17,7 @@ The list of the experiments performed each year is given, followed by the pictur
 {% for page in years %}
   <li class="open-day-item">
       <a href="{{ page.url }}">
-          <img src="{{ page.image }}" alt="{{ page.year }}">
+          <img src="{{ page.image }}" loading="lazy" alt="{{ page.year }}">
           <p>{{ page.year }}</p>
       </a>
   </li>
